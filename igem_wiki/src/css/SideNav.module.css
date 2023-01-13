@@ -7,9 +7,9 @@
   margin-top: 10px;
   cursor: pointer;
 }
-.button:hover {
+.button:not(.active):hover {
   background-color: aqua;
 }
-.active {
+.button.active {
   background-color: #f1a8a8;
 }
