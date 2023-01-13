@@ -1,7 +1,7 @@
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import About from './pages/About'
+import Home from './pages/Home'
 
-const Home = () => <div>this is home</div>
-const About = () => <div>this is about</div>
 
 function App () {
   return (
@@ -16,6 +16,7 @@ function App () {
         </Routes>
       </BrowserRouter>
     </div>
+
   )
 }
 

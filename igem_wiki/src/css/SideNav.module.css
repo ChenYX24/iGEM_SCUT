@@ -1,0 +1,15 @@
+.SideNav {
+  position: fixed;
+  top: 15%;
+  width: 20%;
+}
+.button {
+  margin-top: 10px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: aqua;
+}
+.active {
+  background-color: #f1a8a8;
+}
