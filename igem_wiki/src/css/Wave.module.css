@@ -7,23 +7,6 @@
   max-height: 150px;
 }
 
-.content {
-  position: relative;
-  height: 20vh;
-  text-align: center;
-  background-color: white;
-}
-
-.content a {
-  margin: 0 5px;
-  font-size: 12px;
-  color: #333;
-}
-
-.content a:hover {
-  color: #000;
-}
-
 /* Animation */
 
 .parallax > use {
@@ -58,12 +41,6 @@
   .waves {
     height: 40px;
     min-height: 40px;
-  }
-  .content {
-    height: 30vh;
-  }
-  h1 {
-    font-size: 24px;
   }
 }
 .footPage {
