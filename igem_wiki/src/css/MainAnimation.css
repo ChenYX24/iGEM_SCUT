@@ -1,0 +1,37 @@
+.mainAnimation {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+.background {
+  /* 开屏动画 */
+  background-image: url(../resources/test3.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 100vh;
+  font: 900 8rem '';
+  /* 裁剪文字背景 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.background::before {
+  content: '';
+  background-size: cover;
+  background-image: inherit;
+  background-position: 50% 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -99;
+}
+/* .text {
+  box-shadow: 0 5px 202px rgba(54, 185, 179, 0.5);
+} */

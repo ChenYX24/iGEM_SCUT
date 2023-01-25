@@ -1,7 +1,14 @@
+import GraphicCard from "../components/GraphicCard"
+import NavBar from "../components/NavBar"
+import Wave from "../components/Wave"
+import MainAnimation from "../components/MainAnimation"
 function About () {
   return (
     <div>
-      <div><h2>about</h2></div>
+      <NavBar />
+      <MainAnimation />
+      <GraphicCard />
+      <Wave />
     </div >
   )
 }
