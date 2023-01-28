@@ -19,6 +19,12 @@ function NavBar () {
   //   }
   // })
 
+  const [barDisplay,setBarDisplay] = useState(true)
+
+  if (barDisplay){
+    console.log('ssssssss')
+  }
+
   return (
     <>
       <header id={style['header']}>
@@ -28,11 +34,11 @@ function NavBar () {
         <nav ref={nav}>
           <ul className={style['columns']}>
             <li>
-              <a href="javascript:;" data-after="Home">Home</a>
+              <a href="javascript:;" onMouseEnter={()=>setBarDisplay(true)}>Home</a>
             </li>
             <li>
-              <a href="javascript:;" data-after="Project">Project</a>
-              <ul className={style['details']}>
+              <a href="javascript:;" onMouseEnter={()=>setBarDisplay(true)}>Project</a>
+              <ul className={style['details']} onMouseEnter={()=>setBarDisplay(false)}>
                 <li><a href="javascript:;">content</a></li>
                 <li><a href="javascript:;">content</a></li>
                 <li><a href="javascript:;">content</a></li>
@@ -41,8 +47,8 @@ function NavBar () {
               </ul>
             </li>
             <li>
-              <a href="javascript:;" data-after="Outlook">Outlook</a>
-              <ul className={style['details']}>
+              <a href="javascript:;" onMouseEnter={()=>setBarDisplay(true)}>Outlook</a>
+              <ul className={style['details']} onMouseEnter={()=>setBarDisplay(false)}>
                 <li><a href="javascript:;">content</a></li>
                 <li><a href="javascript:;">content</a></li>
                 <li><a href="javascript:;">content</a></li>
@@ -51,8 +57,8 @@ function NavBar () {
               </ul>
             </li>
             <li>
-              <a href="javascript:;" data-after="Lab">Lab</a>
-              <ul className={style['details']}>
+              <a href="javascript:;" onMouseEnter={()=>setBarDisplay(true)}>Lab</a>
+              <ul className={style['details']} onMouseEnter={()=>setBarDisplay(false)}>
                 <li><a href="javascript:;">content</a></li>
                 <li><a href="javascript:;">content</a></li>
                 <li><a href="javascript:;">content</a></li>
@@ -61,8 +67,8 @@ function NavBar () {
               </ul>
             </li>
             <li>
-              <a href="javascript:;" data-after="Human Practices">Human Practices</a>
-              <ul className={style['details']}>
+              <a href="javascript:;" onMouseEnter={()=>setBarDisplay(true)}>HP</a>
+              <ul className={style['details']} onMouseEnter={()=>setBarDisplay(false)}>
                 <li><a href="javascript:;">content</a></li>
                 <li><a href="javascript:;">content</a></li>
                 <li><a href="javascript:;">content</a></li>
@@ -71,8 +77,8 @@ function NavBar () {
               </ul>
             </li>
             <li>
-              <a href="javascript:;" data-after="Team">Team</a>
-              <ul className={style['details']}>
+              <a href="javascript:;" onMouseEnter={()=>setBarDisplay(true)}>Team</a>
+              <ul className={style['details']} onMouseEnter={()=>setBarDisplay(false)}>
                 <li><a href="javascript:;">content</a></li>
                 <li><a href="javascript:;">content</a></li>
                 <li><a href="javascript:;">content</a></li>
@@ -81,8 +87,8 @@ function NavBar () {
               </ul>
             </li>
             <li>
-              <a href="javascript:;" data-after="Judging">Judging</a>
-              <ul className={style['details']}>
+              <a href="javascript:;" onMouseEnter={()=>setBarDisplay(true)}>Judging</a>
+              <ul className={style['details']} onMouseEnter={()=>setBarDisplay(false)}>
                 <li><a href="javascript:;">content</a></li>
                 <li><a href="javascript:;">content</a></li>
                 <li><a href="javascript:;">content</a></li>
@@ -90,7 +96,7 @@ function NavBar () {
                 <li><a href="javascript:;">content</a></li>
               </ul>
             </li>
-            <div className={style['animation']}></div>
+            <div className={style['animation']} style={{background:!barDisplay?"linear-gradient(112.32deg, rgba(209, 250, 240, 0.42) 2.26%, rgba(244, 198, 192, 0.075) 100.53%)":""}}></div>
           </ul>
         </nav>
       </header>
