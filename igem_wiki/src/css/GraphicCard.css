@@ -18,7 +18,7 @@ body {
 }
 .graphicCard {
   position: relative;
-  width: 1280px;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
