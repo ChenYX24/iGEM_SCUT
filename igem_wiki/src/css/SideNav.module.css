@@ -1,3 +1,9 @@
+:root {
+  --Lfrom-deg: 180deg;
+  --Rfrom-deg: -180deg;
+  --Rto-deg: 0deg;
+  --Lto-deg: 360deg;
+}
 .SideNav {
   position: fixed;
   top: 15%;
@@ -12,4 +18,126 @@
 }
 .button.active {
   background-color: #f1a8a8;
+}
+
+.circle {
+  position: fixed;
+  top: 15%;
+  left: 4%;
+  width: 100px;
+  height: 100px;
+  background: #eee;
+  margin: 100px auto;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.left,
+.right {
+  width: 50px;
+  height: 100px;
+  position: absolute;
+
+  opacity: 0.5;
+  overflow: hidden;
+}
+.right {
+  right: 0;
+}
+.left .left_circle,
+.right .right_circle {
+  width: 50px;
+  height: 100px;
+  background: red;
+  opacity: 0.5;
+  /* transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s; */
+}
+.left .left_circle {
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  transform-origin: right center;
+  transform: rotate(var(--Lfrom-deg));
+  -webkit-transform: rotate(var(--Lfrom-deg));
+  -moz-transform: rotate(var(--Lfrom-deg));
+  -ms-transform: rotate(var(--Lfrom-deg));
+  -o-transform: rotate(var(--Lfrom-deg));
+}
+.left .left_circle .animate {
+  animation: progress1 2s linear forwards;
+  animation-delay: 2s;
+  -webkit-animation: progress1 2s linear forwards;
+}
+@keyframes progress1 {
+  to {
+    transform: rotate(var(--Lto-deg));
+    -webkit-transform: rotate(var(--Lto-deg));
+    -moz-transform: rotate(var(--Lto-deg));
+    -ms-transform: rotate(var(--Lto-deg));
+    -o-transform: rotate(var(--Lto-deg));
+  }
+}
+.right .right_circle {
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  background: red;
+  transform-origin: left center;
+  transform: rotate(var(--Rfrom-deg));
+  -webkit-transform: rotate(var(--Rfrom-deg));
+  -moz-transform: rotate(var(--Rfrom-deg));
+  -ms-transform: rotate(var(--Rfrom-deg));
+  -o-transform: rotate(var(--Rfrom-deg));
+}
+.right .right_circle .animate {
+  animation: progress2 2s linear forwards;
+  -webkit-animation: progress2 2s linear forwards;
+}
+@keyframes progress2 {
+  to {
+    transform: rotate(var(--Rto-deg));
+    -webkit-transform: rotate(var(--Rto-deg));
+    -moz-transform: rotate(var(--Rto-deg));
+    -ms-transform: rotate(var(--Rto-deg));
+    -o-transform: rotate(var(--Rto-deg));
+  }
+}
+/* .left:hover .left_circle {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+.right:hover .right_circle {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+} */
+.inner {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  text-align: center;
+  line-height: 80px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  color: #999;
+  background: #fff;
 }
