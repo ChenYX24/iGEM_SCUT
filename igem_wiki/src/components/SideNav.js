@@ -4,12 +4,14 @@
 import { useState } from 'react'
 import SideNavCss from "../css/SideNav.module.css"
 import $ from '../js/jquery'
+
 function SideNav (props) {
   const [data, setData] = useState(props.data)
   const [isClick, setClick] = useState(false)
   const [scrollPercent, setScrollPercent] = useState(0)
   const [leftAnimateFlag, setLeftAnimateFlag] = useState(false)
   const [rightAnimateFlag, setRightAnimateFlag] = useState(false)
+  const [isHover, setIsHover] = useState(false)
   //跳转
   const clickHandler = (e, id) => {
     setClick(true)
@@ -70,22 +72,23 @@ function SideNav (props) {
     }
 
   })
-
-  // 监听各种事件
-  // useEffect(() => {
-  //   const element1 = document.getElementsByClassName(`${SideNavCss.left_circle}`)[0]
-  //   const element2 = document.getElementsByClassName(`${SideNavCss.right_circle}`)[0]
-  //   element1.addEventListener("animationend", () => setLeftAnimateFlag(false))
-  //   element2.addEventListener("animationend", () => setRightAnimateFlag(false))
-  //   return () => {
-  //     element1.removeEventListener("animationend", () => setLeftAnimateFlag(false))
-  //     element2.removeEventListener("animationend", () => setRightAnimateFlag(false))
-  //   }
-  // }, [])
+  $(`.${SideNavCss.circle}`).hover(
+    function () {
+      setIsHover(true)
+    },
+    function () {
+      setIsHover(false)
+    }
+  )
 
   return (
     <>
       <div className={SideNavCss.circle}>
+        {isHover ? <div className={SideNavCss.SideNav}>
+          {data.map(item => (
+            <div key={item.id} className={`${SideNavCss.button} ${item.isActive ? SideNavCss.active : ""}`} onClick={(e) => clickHandler(e, item.id)}>{item.text}</div>
+          ))}
+        </div> : null}
         <div className={SideNavCss.left}>
           <div className={`${SideNavCss.left_circle} ${leftAnimateFlag ? SideNavCss.animate : ""}`}></div>
         </div>
@@ -93,12 +96,9 @@ function SideNav (props) {
           <div className={`${SideNavCss.right_circle} ${rightAnimateFlag ? SideNavCss.animate : ""}`}></div>
         </div>
         <div className={SideNavCss.inner}>{scrollPercent}%</div>
+
       </div>
-      <div className={SideNavCss.SideNav}>
-        {data.map(item => (
-          <div key={item.id} className={`${SideNavCss.button} ${item.isActive ? SideNavCss.active : ""}`} onClick={(e) => clickHandler(e, item.id)}>{item.text}</div>
-        ))}
-      </div>
+
     </>
   )
 }

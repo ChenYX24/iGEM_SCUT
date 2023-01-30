@@ -1,4 +1,5 @@
 import React from "react"
+import GlassCard from "../components/GlassCard"
 import HomeMain from "../components/HomeMain"
 import NavBar from "../components/NavBar"
 import SideNav from "../components/SideNav"
@@ -15,6 +16,14 @@ class Home extends React.Component {
           <HomeMain />
           <div className={HomeCss.right}></div>
         </div>
+        <div className={HomeCss.GlassGroup}>
+          <GlassCard />
+          <GlassCard />
+          <GlassCard />
+          <GlassCard />
+          <GlassCard />
+        </div>
+
         <Wave />
       </>
     )

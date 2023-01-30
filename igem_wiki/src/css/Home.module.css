@@ -5,3 +5,8 @@
   margin-top: 1em;
   margin-bottom: 300px;
 }
+.GlassGroup {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+}
