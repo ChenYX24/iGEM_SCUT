@@ -14,12 +14,13 @@ function MainAnimation () {
       background.style.backgroundPosition = ''
       text.style.boxShadow = ''
     }
+
   }
   )
   return (
-    <div class="mainAnimation">
-      <div class="background">
-        <span class='text'>iGEM-SCUT</span>
+    <div className="mainAnimation">
+      <div className="background">
+        <span className='text'>SCUT-China</span>
       </div>
     </div>
   )

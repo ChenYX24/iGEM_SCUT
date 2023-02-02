@@ -4,8 +4,9 @@ function DynamicNumberBox () {
   const datas = [
     {
       className: 'data1',
+      dataDelay: '1',
       options: {
-        time: 2000,
+        time: 3000,
         num: 1024,
         regulator: 40
       },
@@ -14,8 +15,9 @@ function DynamicNumberBox () {
     },
     {
       className: 'data2',
+      dataDelay: '1',
       options: {
-        time: 2000,
+        time: 3000,
         num: 1025,
         regulator: 40
       },
@@ -24,8 +26,9 @@ function DynamicNumberBox () {
     },
     {
       className: 'data3',
+      dataDelay: '2',
       options: {
-        time: 2000,
+        time: 3000,
         num: 1026,
         regulator: 40
       },
@@ -34,8 +37,9 @@ function DynamicNumberBox () {
     },
     {
       className: 'data4',
+      dataDelay: '2',
       options: {
-        time: 2000,
+        time: 3000,
         num: 1027,
         regulator: 40
       },
@@ -44,13 +48,13 @@ function DynamicNumberBox () {
     }
   ]
   const getCard = (data) => {
-    return (<div class="numberBox" key={data['className']}>
-      <div class="numberContent">
-        <div class="circle">
-          <div class={data['className']} id={data['className']}>{data['options']['num']}</div>
+    return (<div className="numberBox fadein-target" key={data['className']} data-delay={data['dataDelay']}>
+      <div className="numberContent">
+        <div className="circle">
+          <div className={data['className']} id={data['className']}>{data['options']['num']}</div>
         </div>
       </div>
-      <div class="textContent">
+      <div className="textContent">
         <h2>{data['title']}</h2>
         <p>{data['text']}</p>
       </div>
@@ -77,7 +81,7 @@ function DynamicNumberBox () {
         count = finalNum
       }
       var t = Math.floor(count)
-      if (t == initial) return
+      if (t === initial) return
 
       initial = t
       $this.innerHTML = initial
@@ -93,6 +97,7 @@ function DynamicNumberBox () {
           NumAutoPlus(data['className'], data['options'])
         })
         observer.unobserve(el)
+        document.querySelector(".dynamicNumberBox").classList.add("_visible")
       }
       el.onload = el.onerror = () => observer.unobserve(el)
     })
@@ -104,9 +109,9 @@ function DynamicNumberBox () {
   }, [])
 
   return (
-    <div class="dynamicNumberBox">
-      <div class="title2">This is title</div>
-      <div class="flexBox">
+    <div className="dynamicNumberBox fadein">
+      <div className="title2 fadein-target">This is title</div>
+      <div className="flexBox">
         {datas.map(data => getCard(data))}
       </div>
     </div>
