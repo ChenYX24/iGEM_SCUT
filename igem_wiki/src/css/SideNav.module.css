@@ -7,7 +7,10 @@
 .SideNav {
   position: fixed;
   top: 15%;
-  width: 20%;
+  left: 4%;
+  width: 100px;
+  height: 100px;
+  margin: 100px auto;
 }
 .button {
   margin-top: 10px;
@@ -33,6 +36,7 @@
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  display: block;
 }
 .left,
 .right {

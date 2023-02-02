@@ -1,0 +1,62 @@
+:root {
+  --shrimpH: 30;
+  --shrimpW: 30;
+  --change-top: 0;
+}
+.wave {
+  width: calc(var(--shrimpW) * 1vh);
+  height: calc(var(--shrimpH) * 1vh);
+  position: absolute;
+  top: calc(var(--change-top) * 1vh);
+  left: 0;
+  z-index: 3;
+  transform: scaleX(2);
+  -webkit-transform: scaleX(2);
+  -moz-transform: scaleX(2);
+  -ms-transform: scaleX(2);
+  -o-transform: scaleX(2);
+  animation: Wave 3s linear forwards infinite;
+  -webkit-animation: Wave 3s linear forwards infinite;
+}
+@keyframes Wave {
+  0% {
+    transform: translate3d(calc(-0.5 * var(--shrimpW) * 1vh), 0, 0) scaleX(3);
+    -webkit-transform: translate3d(calc(-0.5 * var(--shrimpW) * 1vh), 0, 0)
+      scaleX(3);
+    -moz-transform: translate3d(calc(-0.5 * var(--shrimpW) * 1vh), 0, 0)
+      scaleX(3);
+    -ms-transform: translate3d(calc(-0.5 * var(--shrimpW) * 1vh), 0, 0)
+      scaleX(3);
+    -o-transform: translate3d(calc(-0.5 * var(--shrimpW) * 1vh), 0, 0) scaleX(3);
+  }
+  100% {
+    transform: translate3d(calc(0.5 * var(--shrimpW) * 1vh), 0, 0) scaleX(3);
+    -webkit-transform: translate3d(calc(0.5 * var(--shrimpW) * 1vh), 0, 0)
+      scaleX(3);
+    -moz-transform: translate3d(calc(0.5 * var(--shrimpW) * 1vh), 0, 0)
+      scaleX(3);
+    -ms-transform: translate3d(calc(0.5 * var(--shrimpW) * 1vh), 0, 0) scaleX(3);
+    -o-transform: translate3d(calc(0.5 * var(--shrimpW) * 1vh), 0, 0) scaleX(3);
+  }
+}
+.shrimp {
+  width: calc(var(--shrimpW) * 1vh);
+  height: calc(var(--shrimpH) * 1vh);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+.outbox {
+  /* position: relative; */
+  width: calc(var(--shrimpW) * 1vh);
+  height: calc(var(--shrimpH) * 1vh);
+  /* left: 40vw; */
+  overflow: hidden;
+}
+.center {
+  position: fixed;
+  top: 20%;
+  left: 80%;
+  overflow: hidden;
+}

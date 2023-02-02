@@ -72,23 +72,32 @@ function SideNav (props) {
     }
 
   })
+
   $(`.${SideNavCss.circle}`).hover(
     function () {
       setIsHover(true)
+      // this.style.display = "none"
     },
     function () {
       setIsHover(false)
+      // this.style.display = "block"
     }
   )
+  // $(`.${SideNavCss.SideNav}`).hover(
+  //   function () {
+  //     setIsHover(true)
+  //     // this.style.display = "none"
+  //   },
+  //   function () {
+  //     setIsHover(false)
+  //     // this.style.display = "block"
+  //   }
+  // )
 
   return (
     <>
       <div className={SideNavCss.circle}>
-        {isHover ? <div className={SideNavCss.SideNav}>
-          {data.map(item => (
-            <div key={item.id} className={`${SideNavCss.button} ${item.isActive ? SideNavCss.active : ""}`} onClick={(e) => clickHandler(e, item.id)}>{item.text}</div>
-          ))}
-        </div> : null}
+
         <div className={SideNavCss.left}>
           <div className={`${SideNavCss.left_circle} ${leftAnimateFlag ? SideNavCss.animate : ""}`}></div>
         </div>
@@ -96,7 +105,11 @@ function SideNav (props) {
           <div className={`${SideNavCss.right_circle} ${rightAnimateFlag ? SideNavCss.animate : ""}`}></div>
         </div>
         <div className={SideNavCss.inner}>{scrollPercent}%</div>
-
+        {isHover ? <div className={`${SideNavCss.SideNav}`}>
+          {data.map(item => (
+            <div key={item.id} className={`${SideNavCss.button} ${item.isActive ? SideNavCss.active : ""}`} onClick={(e) => clickHandler(e, item.id)}>{item.text}</div>
+          ))}
+        </div> : null}
       </div>
 
     </>

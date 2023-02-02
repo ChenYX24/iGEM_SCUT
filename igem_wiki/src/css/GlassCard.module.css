@@ -20,7 +20,7 @@
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  background-image: url('../resources/card.jpg');
+  /* background-image: url('../resources/card.jpg'); */
 }
 .card .content {
   padding: 20px;

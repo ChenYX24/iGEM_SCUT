@@ -2,6 +2,7 @@ import React from "react"
 import GlassCard from "../components/GlassCard"
 import HomeMain from "../components/HomeMain"
 import NavBar from "../components/NavBar"
+import ProgressBar from "../components/ProgressBar"
 import SideNav from "../components/SideNav"
 import Wave from "../components/Wave"
 import HomeCss from "../css/Home.module.css"
@@ -23,7 +24,7 @@ class Home extends React.Component {
           <GlassCard />
           <GlassCard />
         </div>
-
+        <ProgressBar />
         <Wave />
       </>
     )
