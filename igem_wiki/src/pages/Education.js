@@ -51,7 +51,7 @@ function Education () {
                     {/*    </g>*/}
                     {/*</svg>*/}
                     <div className={EducationCss.footPage}>
-                        
+
                     </div>
                 {/*</div>*/}
             </div>
