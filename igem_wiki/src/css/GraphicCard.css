@@ -34,7 +34,7 @@ body {
   padding: 20px 15px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 202px rgba(0, 0, 0, 0.2);
   background-color: #fff;
   transition: 0.3s ease-in-out;
 }
@@ -48,7 +48,7 @@ body {
   top: -60px;
   left: 5px;
   z-index: 1;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); */
 }
 .imgBx > img {
   max-width: 100%;

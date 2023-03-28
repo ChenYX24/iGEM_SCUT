@@ -1,18 +1,34 @@
 .mainAnimation {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: calc(102vw - 32vw);
   width: 100vw;
   overflow: hidden;
+  position: relative;
+  /* background-color: rgba(54, 185, 179, 0.5); */
+  /* background: linear-gradient(
+    90deg,
+    rgba(127, 229, 221, 0.5),
+    rgba(147, 224.5, 214, 0.5)
+  ); */
+  /* z-index: -99; */
+}
+.imgBox {
+  height: calc(102vw - 32vw);
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
 }
 .background {
   /* 开屏动画 */
-  background-image: url(../resources/test4.jpg);
+  background-image: url(../resources/animation.jfif);
   background-size: cover;
   background-position: 50% 50%;
-  height: 100vh;
+  height: 150vh;
   font: 900 8rem '';
-  /* 裁剪文字背景 */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: flex;
@@ -33,6 +49,102 @@
   right: 0;
   z-index: -99;
 }
-/* .text {
-  box-shadow: 0 5px 202px rgba(54, 185, 179, 0.5);
+.text {
+  /* box-shadow: 0 5px 202px rgba(54, 185, 179, 0.5); */
+  height: 20vw;
+  position: absolute;
+  font: 900 7.5rem '';
+  color: white;
+  z-index: 1;
+  top: 30vw;
+  /* opacity: 0.8; */
+}
+.fadein._visible {
+  transition-duration: 1800ms, 1800ms;
+  transition-timing-function: ease, ease;
+  transition-delay: 200ms, 200ms;
+  transition-property: opacity, transform;
+}
+.fadein:not(._visible) {
+  opacity: 0;
+  transform: translateY(80px);
+}
+#img1 {
+  transform: scale(1.1);
+  top: -18vw;
+  animation: changeleft 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+#img2 {
+  transform: scale(1.1);
+  top: -18vw;
+  animation: changeright 30s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+#img3 {
+  transform: scale(1.5);
+  top: -30vw;
+  animation: changeleft 35s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+#img4 {
+  /* transform: scaleY(0.7); */
+  top: -23vw;
+  animation: upAndDown 5s linear infinite;
+}
+#img5 {
+  /* transform: scale(0.7); */
+  top: -23vw;
+  animation: upAndDown 5s linear infinite;
+}
+/* .MainAnimation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden;
 } */
+.mainAnimation img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  /* display: block; */
+}
+
+@keyframes changeright {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes changeleft {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes upAndDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5vw);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

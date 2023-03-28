@@ -6,7 +6,7 @@ function GraphicCard () {
       {/* <div className="title"><h2>This is title</h2></div> */}
       <div className="card">
         <div className="imgBx">
-          <img src={require("../resources/test2.png")} alt="" />
+          <img src={require("../assets/logo2.png")} alt="" />
         </div>
         <div className="content">
           <h2>Card One</h2>
@@ -18,7 +18,7 @@ function GraphicCard () {
       </div>
       <div className="card">
         <div className="imgBx">
-          <img src={require("../resources/test2.png")} alt="" />
+          <img src={require("../assets/logo2.png")} alt="" />
         </div>
         <div className="content">
           <h2>Card Two</h2>
@@ -30,7 +30,7 @@ function GraphicCard () {
       </div>
       <div className="card">
         <div className="imgBx">
-          <img src={require("../resources/test2.png")} alt="" />
+          <img src={require("../assets/logo2.png")} alt="" />
         </div>
         <div className="content">
           <h2>Card Three</h2>
