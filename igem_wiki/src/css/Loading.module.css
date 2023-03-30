@@ -24,7 +24,7 @@
   stroke-linecap: round;
   animation: fade-in 0.4s linear forwards;
   -webkit-animation: fade-in 0.4s linear forwards;
-  animation-delay: 2s;
+  animation-delay: 1.6s;
 }
 .flower2 {
   /*填充颜色*/
@@ -36,7 +36,7 @@
   stroke-linecap: round;
   animation: fade-in 0.4s linear forwards;
   -webkit-animation: fade-in 0.4s linear forwards;
-  animation-delay: 1.5s;
+  animation-delay: 1.2s;
 }
 .flower3 {
   /*填充颜色*/
@@ -48,7 +48,7 @@
   stroke-linecap: round;
   animation: fade-in 0.4s linear forwards;
   -webkit-animation: fade-in 0.4s linear forwards;
-  animation-delay: 1s;
+  animation-delay: 0.8s;
 }
 .flower4 {
   /*填充颜色*/
@@ -60,7 +60,7 @@
   stroke-linecap: round;
   animation: fade-in 0.4s linear forwards;
   -webkit-animation: fade-in 0.4s linear forwards;
-  animation-delay: 0.5s;
+  animation-delay: 0.4s;
 }
 .shrimp {
   /*填充颜色*/
@@ -72,7 +72,7 @@
   stroke-linecap: round;
   animation: fade-in 0.4s linear forwards;
   -webkit-animation: fade-in 0.4s linear forwards;
-  animation-delay: 2.5s;
+  animation-delay: 2s;
 }
 .ulBox {
   list-style: none; /* 去除点 */
@@ -87,6 +87,41 @@
   color: #60b3b7;
   animation: sway 0.4s linear alternate infinite;
   -webkit-animation: sway 0.4s linear alternate infinite;
+}
+.dot {
+  transform: translateY(10%);
+  animation: jump 0.4s linear alternate infinite;
+  -webkit-animation: jump 0.4s linear alternate infinite;
+  -webkit-transform: translateY(10%);
+  -moz-transform: translateY(10%);
+  -ms-transform: translateY(10%);
+  -o-transform: translateY(10%);
+}
+.dot2 {
+  transform: translateY(10%);
+  animation: jump 0.4s linear alternate infinite;
+  -webkit-animation: jump 0.4s linear alternate infinite;
+  animation-delay: 0.2s;
+  -webkit-transform: translateY(10%);
+  -moz-transform: translateY(10%);
+  -ms-transform: translateY(10%);
+  -o-transform: translateY(10%);
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+  }
+  100% {
+    transform: rotateY(100%);
+    -webkit-transform: rotateY(100%);
+    -moz-transform: rotateY(100%);
+    -ms-transform: rotateY(100%);
+    -o-transform: rotateY(100%);
+  }
 }
 @keyframes sway {
   0% {

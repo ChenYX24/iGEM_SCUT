@@ -35,7 +35,9 @@ function Loading () {
           <li className={LoadingCss.liBox}>i</li>
           <li className={LoadingCss.liBox}>n</li>
           <li className={LoadingCss.liBox}>g</li>
-          <li className={LoadingCss.liBox}>...</li>
+          <li className={`${LoadingCss.liBox} ${LoadingCss.dot}`}>.</li>
+          <li className={`${LoadingCss.liBox} ${LoadingCss.dot2}`}>.</li>
+          <li className={`${LoadingCss.liBox} ${LoadingCss.dot}`}>.</li>
         </ul>
       </div>
     </>

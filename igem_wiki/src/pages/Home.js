@@ -20,7 +20,7 @@ class Home extends React.Component {
   componentDidMount () {
     setTimeout(() => {
       this.setState({ loading: false })
-    }, 3500)
+    }, 3000)
   }
   render () {
     const { loading } = this.state
