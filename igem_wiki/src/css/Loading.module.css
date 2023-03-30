@@ -1,0 +1,116 @@
+.flower {
+  width: 30vw;
+  height: 30vw;
+  fill-opacity: calc(0);
+}
+.flowerHeart {
+  /*填充颜色*/
+  fill: #60b3b7;
+  /*图形元素的外轮廓颜色*/ /*stroke: #60b3b7;
+  */ /*外轮廓宽度*/
+  stroke-width: 5;
+  /*两端的形状*/
+  stroke-linecap: round;
+  animation: fade-in 0.4s linear forwards;
+  -webkit-animation: fade-in 0.4s linear forwards;
+}
+.flower1 {
+  /*填充颜色*/
+  fill: #60b3b7;
+  /*图形元素的外轮廓颜色*/ /*stroke: #60b3b7;
+  */ /*外轮廓宽度*/
+  stroke-width: 5;
+  /*两端的形状*/
+  stroke-linecap: round;
+  animation: fade-in 0.4s linear forwards;
+  -webkit-animation: fade-in 0.4s linear forwards;
+  animation-delay: 2s;
+}
+.flower2 {
+  /*填充颜色*/
+  fill: #60b3b7;
+  /*图形元素的外轮廓颜色*/ /*stroke: #60b3b7;
+  */ /*外轮廓宽度*/
+  stroke-width: 5;
+  /*两端的形状*/
+  stroke-linecap: round;
+  animation: fade-in 0.4s linear forwards;
+  -webkit-animation: fade-in 0.4s linear forwards;
+  animation-delay: 1.5s;
+}
+.flower3 {
+  /*填充颜色*/
+  fill: #60b3b7;
+  /*图形元素的外轮廓颜色*/ /*stroke: #60b3b7;
+  */ /*外轮廓宽度*/
+  stroke-width: 5;
+  /*两端的形状*/
+  stroke-linecap: round;
+  animation: fade-in 0.4s linear forwards;
+  -webkit-animation: fade-in 0.4s linear forwards;
+  animation-delay: 1s;
+}
+.flower4 {
+  /*填充颜色*/
+  fill: #60b3b7;
+  /*图形元素的外轮廓颜色*/ /*stroke: #60b3b7;
+  */ /*外轮廓宽度*/
+  stroke-width: 5;
+  /*两端的形状*/
+  stroke-linecap: round;
+  animation: fade-in 0.4s linear forwards;
+  -webkit-animation: fade-in 0.4s linear forwards;
+  animation-delay: 0.5s;
+}
+.shrimp {
+  /*填充颜色*/
+  fill: #60b3b7;
+  /*图形元素的外轮廓颜色*/ /*stroke: #60b3b7;
+  */ /*外轮廓宽度*/
+  stroke-width: 5;
+  /*两端的形状*/
+  stroke-linecap: round;
+  animation: fade-in 0.4s linear forwards;
+  -webkit-animation: fade-in 0.4s linear forwards;
+  animation-delay: 2.5s;
+}
+.ulBox {
+  list-style: none; /* 去除点 */
+  display: flex; /* 使用flex布局 */
+  justify-content: space-between; /* 每个li之间的间距均分 */
+  overflow: hidden;
+}
+.liBox {
+  padding: 0 10px;
+  /*添加左右边距*/
+  font-size: 54pt;
+  color: #60b3b7;
+  animation: sway 0.4s linear alternate infinite;
+  -webkit-animation: sway 0.4s linear alternate infinite;
+}
+@keyframes sway {
+  0% {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+  }
+}
+@keyframes fade-in {
+  0% {
+    /* stroke-dasharray: 0, 100%; */
+    fill-opacity: calc(0);
+  }
+  100% {
+    /* stroke-dasharray: 100%, 0; */
+    fill-opacity: calc(1);
+  }
+}
