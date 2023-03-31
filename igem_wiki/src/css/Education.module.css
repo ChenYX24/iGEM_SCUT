@@ -4,15 +4,6 @@
     box-sizing: border-box;
 }
 
-/*html, body {*/
-/*    height: 100%;*/
-/*    padding-top: 12vh;*/
-/*    !*display: flex;*!*/
-/*    !*align-items: center;*!*/
-/*    !*justify-content: center;*!*/
-/*    !*background: linear-gradient(antiquewhite, navajowhite);*!*/
-/*}*/
-
 .container{
     position: relative;
     height: 100%;
@@ -20,34 +11,19 @@
 }
 
 .container .backgroundImg{
-    position: relative;
-    top: -45vh;
-    left: 0;
     width: 100vw;
-    /*height: 90vh;*/
+    height: 100vh;
+    background-image: url(../assets/education/education.png);
+    background-size: cover;
+    background-position: 50% 70%;
     z-index: 1;
     filter: blur(3px);
-    /*border-left-bottom-radius: 36%;*/
-    /*border-right-bottom-radius: 36%;*/
     box-shadow:0 0 50px 50px #fff;
 }
 
 .container .backgroundImg img{
     width: 100%;
     height: 100%;
-    /*border-bottom-left-radius: 36%;*/
-    /*border-bottom-right-radius: 36%;*/
-}
-
-.container .sea {
-    position: relative;
-    width: 100vw;
-    height: 100vw;
-    /*background-color: whitesmoke;*/
-    /*background-image: Linear-gradient(darkblue, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.5));*/
-    border-radius: 5px;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, .5);
-    overflow: hidden;
 }
 
 .container .title {
@@ -57,66 +33,34 @@
     transform: translate(-50%,-50%);
     color: white;
     font-size: 10vw;
-    /*font-family: Serif;*/
     text-align: center;
-    /*text-transform: uppercase;*/
     line-height: 250px;
-    /*letter-spacing: 0.1em;*/
-    z-index: 999;
+    z-index: 2;
     font-weight: 800;
     text-shadow: 0 0 15px rgba(255,255,255,.5);
 }
 
-.container .sea .wave {
-    position: absolute;
-    width: 200vw;
-    height: 200vw;
-    background-color: deepskyblue;
-    top: 50vh;
-    left: -50vw;
-    filter: opacity(0.4);
-    border-radius: 40%;
-    animation: drift 10s linear infinite;
-    z-index: 999;
-}
-
-.container .sea .wave:nth-of-type(1) {
-    animation-duration: 10s;
-    /*filter: opacity(0.3);*/
-    /*z-index: 0;*/
-}
-
-.container .sea .wave:nth-of-type(2) {
-    animation-duration: 13s;
-    background-color: deepskyblue;
-    /*filter: opacity(0.3);*/
-    /*z-index: 0;*/
-}
-
-.container .sea .wave:nth-of-type(3) {
-    animation-duration: 15s;
-    background-color: red;
-    filter: opacity(0.1);
-    /*z-index: 0;*/
-}
-
-@keyframes drift {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(270deg);
-    }
-}
-
-.waves {
+.waveContainer {
     position: absolute;
     top: 70vh;
+    width: 100vw;
+    z-index: 2;
+}
+
+.waveContainer .waves {
     width: 100%;
     height: 25vh;
     margin-bottom: -4px; /*Fix for safari gap*/
     min-height: 100px;
     max-height: 150px;
+}
+
+.waveContainer .filling {
+    position: absolute;
+    top: 20vh;
+    width: 100%;
+    height: 12vh;
+    background-color: white;
     z-index: 999;
 }
 
@@ -141,6 +85,150 @@
     animation-delay: -5s;
     animation-duration: 20s;
 }
+
+.articleContainer{
+    width: 100vw;
+    height: 500vh;
+    padding: 5vh 5vw 0 10vw;
+    background: linear-gradient(to right, rgba(234,230,224,.3), rgba(193,227,230,.3));
+}
+
+.articleContainer .topContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10vh 4vw 4vh;
+}
+
+.topContainer h2 {
+    padding-right: 5vw;
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+    color: rgba(235, 207, 191, 0.8);
+    font-weight: bold;
+    text-shadow: 0.3vw 0.3vw 0.2vw rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+}
+
+.topContainer p {
+    white-space: normal;
+    font-size: 1.2vw;
+    line-height: 2vw;
+}
+
+.articleContainer .midContainer {
+    display: flex;
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
+    padding: 8vh 4vw;
+    flex-wrap: wrap;
+}
+
+.midContainer .leftBox1 {
+    /*flex: 1.5;*/
+    width: 45vw;
+    padding: 0 4vw 0 0;
+    margin-bottom: 10vh;
+}
+
+.midContainer .leftBox1 h2 {
+    padding-right: 5vw;
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+    color: rgba(235, 207, 191, 0.8);
+    font-weight: bold;
+    text-shadow: 0.3vw 0.3vw 0.2vw rgba(0,0,0,0.2);
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.midContainer .leftBox1 p {
+    font-size: 1.2vw;
+    line-height: 2vw;
+}
+
+.midContainer .rightBox1 {
+    width: 28vw;
+    height: 20vw;
+    margin-top: 20vh;
+}
+
+.midContainer .leftBox2 {
+    width: 28vw;
+    height: 20vw;
+}
+
+.leftBox2 img {
+    width: 100%;
+}
+
+.midContainer .rightBox2 {
+    /*flex: 1.5;*/
+    width: 45vw;
+    padding: 0 0 0 4vw;
+    margin-bottom: 10vh;
+}
+
+.midContainer .rightBox2 p {
+    font-size: 1.2vw;
+    line-height: 2vw;
+}
+
+.midContainer .leftBox3 {
+    /*flex: 1.5;*/
+    width: 45vw;
+    padding: 0 4vw 0 0;
+    margin-bottom: 10vh;
+}
+
+.midContainer .leftBox3 p {
+    font-size: 1.2vw;
+    line-height: 2vw;
+}
+
+.midContainer .rightBox3 {
+    width: 28vw;
+    height: 20vw;
+    margin-top: 15vh;
+}
+
+.rightBox3 img {
+    width: 100%;
+}
+
+.articleContainer .bottomContainer {
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
+    padding: 0 4vw;
+}
+
+.bottomContainer h2 {
+    padding-right: 5vw;
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+    color: rgba(235, 207, 191, 0.8);
+    font-weight: bold;
+    text-shadow: 0.3vw 0.3vw 0.2vw rgba(0,0,0,0.2);
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.bottomContainer .box {
+    margin-bottom: 10vh;
+}
+
+.bottomContainer p {
+    white-space: normal;
+    font-size: 1.2vw;
+    line-height: 2vw;
+}
+
+.bottomContainer .box:nth-of-type(1) > p:nth-of-type(n+2) {
+    width: 50vw;
+}
+
 @keyframes move-forever {
     0% {
         transform: translate3d(-90px, 0, 0);
@@ -149,18 +237,20 @@
         transform: translate3d(85px, 0, 0);
     }
 }
+
+@keyframes drift {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(270deg);
+    }
+}
+
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
     .waves {
         height: 40px;
         min-height: 40px;
     }
-}
-.footPage {
-    position: absolute;
-    top: 90vh;
-    width: 100%;
-    height: 30vh;
-    background-color: white;
-    z-index: 999;
 }

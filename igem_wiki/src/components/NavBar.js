@@ -21,10 +21,6 @@ function NavBar () {
 
   const [barDisplay,setBarDisplay] = useState(true)
 
-  if (barDisplay){
-    console.log('ssssssss')
-  }
-
   return (
     <>
       <header id={style['header']}>
