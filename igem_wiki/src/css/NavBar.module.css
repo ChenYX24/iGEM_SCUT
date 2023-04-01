@@ -7,6 +7,7 @@
 html{
     overflow-x: hidden;
 }
+
 body{
     /*background-color: antiquewhite;*/
     padding-top: 12vh;
@@ -16,7 +17,8 @@ body{
 a{
     text-decoration: none;
 }
-#header{
+
+header{
     position: fixed;
     top: 0;
     left: 0;
@@ -31,17 +33,20 @@ a{
     border-radius: 5px;
     z-index: 999;
 }
-#header .logo {
+
+header .logo {
     position: absolute;
     left: 3vw;
     width: 12vh;
     height: 12vh;
 }
-#header .logo img {
+
+header .logo img {
     width: 100%;
     height: 100%;
 }
-#header nav {
+
+header nav {
     height: 12vh;
     /*background-color: rgba(255,255,255,0.7);*/
     z-index: 3;
@@ -49,7 +54,8 @@ a{
     /*backdrop-filter: blur(2px);*/
     /*border-radius: 5px;*/
 }
-#header nav .columns {
+
+header nav .columns {
     position: relative;
     display: flex;
     list-style: none;
@@ -63,7 +69,8 @@ a{
     font-family: Calibri;
     z-index: auto;
 }
-#header nav .columns li {
+
+header nav .columns li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,10 +80,8 @@ a{
     transition: all .3s ease-in;
     cursor: pointer;
 }
-#header nav ul li:hover .details {
-    display: block;
-}
-#header nav .columns li a {
+
+header nav .columns li a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,7 +92,8 @@ a{
     font-weight: 900;
     color: #000000;
 }
-#header nav .details {
+
+header nav .details {
     display: none;
     position: absolute;
     top: 12vh;
@@ -97,39 +103,47 @@ a{
     z-index: 2;
     border-radius: 12px;
     background: rgba(255,255,255,0.6);
+    transition: all .5s ease-out;
 }
-#header nav .columns li:nth-child(2) .details li {
+
+.active {
+    display: block !important;
+}
+
+header nav .columns li:nth-child(2) .details li {
     z-index: auto;
     -webkit-text-fill-color: rgba(29,159,146);
 }
-#header nav .columns li:nth-child(3) .details li {
+header nav .columns li:nth-child(3) .details li {
     z-index: auto;
     -webkit-text-fill-color: rgba(69,162,145);
 }
-#header nav .columns li:nth-child(4) .details li {
+header nav .columns li:nth-child(4) .details li {
     z-index: auto;
     -webkit-text-fill-color: rgba(109,165,144);
 }
-#header nav .columns li:nth-child(5) .details li {
+header nav .columns li:nth-child(5) .details li {
     z-index: auto;
     -webkit-text-fill-color: rgba(149,168,143);
 }
-#header nav .columns li:nth-child(6) .details li {
+header nav .columns li:nth-child(6) .details li {
     z-index: auto;
     -webkit-text-fill-color: rgba(189,171,142);
 }
-#header nav .columns li:nth-child(7) .details li {
+header nav .columns li:nth-child(7) .details li {
     z-index: auto;
     -webkit-text-fill-color: rgba(229,174,141);
 }
-#header nav .columns li .details li{
+
+header nav .columns li .details li{
     display: block;
     width: 100%;
     height: 5vh;
     z-index: auto;
     transition: none;
 }
-#header nav .columns li .details li a{
+
+header nav .columns li .details li a{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,44 +155,45 @@ a{
     line-height: 1.2vw;
     font-weight: 700;
 }
-#header nav .columns li:nth-child(2) .details li:hover{
+
+header nav .columns li:nth-child(2) .details li:hover{
     border-radius: 8px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     backdrop-filter: blur(1px);
     background: linear-gradient(90deg,rgba(127,229,221,0.5),rgba(147,224.5,214,0.5));
 }
-#header nav .columns li:nth-child(3) .details li:hover{
+header nav .columns li:nth-child(3) .details li:hover{
     border-radius: 8px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     backdrop-filter: blur(1px);
     background: linear-gradient(90deg,rgba(147,224.5,214,0.5),rgba(167,220,207,0.5));
 }
-#header nav .columns li:nth-child(4) .details li:hover{
+header nav .columns li:nth-child(4) .details li:hover{
     border-radius: 8px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     backdrop-filter: blur(1px);
     background: linear-gradient(90deg,rgba(167,220,207,0.5),rgba(187,215.5,200,0.5));
 }
-#header nav .columns li:nth-child(5) .details li:hover{
+header nav .columns li:nth-child(5) .details li:hover{
     border-radius: 8px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     backdrop-filter: blur(1px);
     background: linear-gradient(90deg,rgba(187,215.5,200,0.5),rgba(207,211,193,0.5));
 }
-#header nav .columns li:nth-child(6) .details li:hover{
+header nav .columns li:nth-child(6) .details li:hover{
     border-radius: 8px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     backdrop-filter: blur(1px);
     background: linear-gradient(90deg,rgba(207,211,193,0.5),rgba(227,206.5,186,0.5));
 }
-#header nav .columns li:nth-child(7) .details li:hover{
+header nav .columns li:nth-child(7) .details li:hover{
     border-radius: 8px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     backdrop-filter: blur(1px);
     background: linear-gradient(90deg,rgba(227,206.5,186,0.5),rgba(247,202,180,0.5));
 }
 
-#header nav .animation {
+header nav .animation {
     display: none;
     position: absolute;
     height: 100%;
@@ -190,37 +205,38 @@ a{
     border-radius: 12px;
     width: 10vw;
 }
-#header nav .columns li:nth-child(1):hover~.animation{
+
+header nav .columns li:nth-child(1):hover~.animation{
     display: block;
     left: 0;
     background: linear-gradient(90deg,rgba(107,234,228,0.5),rgba(127,229,221,0.5));
 }
-#header nav .columns li:nth-child(2):hover~.animation{
+header nav .columns li:nth-child(2):hover~.animation{
     display: block;
     left: 10vw;
     background: linear-gradient(90deg,rgba(127,229,221,0.5),rgba(147,224.5,214,0.5));
 }
-#header nav .columns li:nth-child(3):hover~.animation{
+header nav .columns li:nth-child(3):hover~.animation{
     display: block;
     left: 20vw;
     background: linear-gradient(90deg,rgba(147,224.5,214,0.5),rgba(167,220,207,0.5));
 }
-#header nav .columns li:nth-child(4):hover~.animation{
+header nav .columns li:nth-child(4):hover~.animation{
     display: block;
     left: 30vw;
     background: linear-gradient(90deg,rgba(167,220,207,0.5),rgba(187,215.5,200,0.5));
 }
-#header nav .columns li:nth-child(5):hover~.animation{
+header nav .columns li:nth-child(5):hover~.animation{
     display: block;
     left: 40vw;
     background: linear-gradient(90deg,rgba(187,215.5,200,0.5),rgba(207,211,193,0.5));
 }
-#header nav .columns li:nth-child(6):hover~.animation{
+header nav .columns li:nth-child(6):hover~.animation{
     display: block;
     left: 50vw;
     background: linear-gradient(90deg,rgba(207,211,193,0.5),rgba(227,206.5,186,0.5));
 }
-#header nav .columns li:nth-child(7):hover~.animation{
+header nav .columns li:nth-child(7):hover~.animation{
     display: block;
     left: 60vw;
     background: linear-gradient(90deg,rgba(227,206.5,186,0.5),rgba(247,202,180,0.5));

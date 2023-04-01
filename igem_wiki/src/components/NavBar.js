@@ -1,98 +1,105 @@
-import style from "../css/NavBar.module.css"
+import NavBarCss from "../css/NavBar.module.css"
 import "../index.css"
-import {useRef, useState} from "react"
+import {useRef, useState } from "react"
+
+const NavBarData = [
+  {
+    name:'Home',
+  },
+  {
+    name:'Project',
+    content:['content', 'content', 'content', 'content', 'content']
+  },
+  {
+    name:'Outlook',
+    content:['content', 'content', 'content', 'content', 'content']
+  },
+  {
+    name:'Lab',
+    content:['content', 'content', 'content', 'content', 'content']
+  },
+  {
+    name:'HP',
+    content:['content', 'content', 'content', 'content', 'content']
+  },
+  {
+    name:'Team',
+    content:['content', 'content', 'content', 'content', 'content']
+},
+  {
+    name:'Judging',
+    content:['content', 'content', 'content', 'content', 'content']
+  }
+]
 
 function NavBar () {
 
   //通过useRef Hook改变导航栏的样式
   const nav = useRef(null)
 
-  const [display,setDisplay] = useState(false)
-
-  // document.addEventListener('scroll', () => {
-  //   let scroll_position = window.scrollY
-  //   if (scroll_position > 200) {
-  //     // nav.current.style.background = 'white'
-  //     // nav.current.style.background = 'linear-gradient(90deg,rgba(107,234,228,0.5),rgba(247,202,180,0.5))'
-  //   } else {
-  //     nav.current.style.background = 'transparent'
-  //   }
-  // })
-
   const [barDisplay,setBarDisplay] = useState(true)
+  const [listDisplay,setListDisplay] = useState(false)
+  const [currentIdx, setCurrentIdx] = useState(null);
+
+  const onMouseEnterHandler = (idx) => {
+    setBarDisplay(true);
+    setCurrentIdx(idx)
+    setTimeout(()=>{
+      setListDisplay(true)
+    },500)
+  };
+
+  const onMouseLeaveHandler = () => {
+    setCurrentIdx(null)
+    setListDisplay(false)
+  };
 
   return (
     <>
-      <header id={style['header']}>
-        <div className={style['logo']}>
+      <header>
+        <div className={NavBarCss.logo}>
           <img src={require('../assets/logo1.png')}/>
         </div>
         <nav ref={nav}>
-          <ul className={style['columns']}>
-            <li>
-              <a href="javascript:;" onMouseEnter={()=>setBarDisplay(true)}>Home</a>
-            </li>
-            <li>
-              <a href="javascript:;" onMouseEnter={()=>setBarDisplay(true)}>Project</a>
-              <ul className={style['details']} onMouseEnter={()=>setBarDisplay(false)}>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
+          <ul className={NavBarCss.columns}>
+          {NavBarData.map((item,i)=>(
+            <li
+                key={i}
+                onMouseEnter={()=>{
+                  onMouseEnterHandler(i)
+                }}
+                onMouseLeave={() => {
+                  onMouseLeaveHandler()
+                }}>
+              <a
+                  onMouseEnter={()=>{
+                    setBarDisplay(true)
+              }}
+              >
+                {item.name}
+              </a>
+              <ul
+                  className={`${NavBarCss.details} ${
+                    listDisplay&&currentIdx===i? NavBarCss.active:''
+                  }`}
+                  onMouseEnter={()=>{
+                    setBarDisplay(false)
+                  }}
+              >
+                {item.content&&item.content.map((item,i)=>(
+                    <li key={i}>
+                      <a>{item}</a>
+                    </li>
+                ))}
               </ul>
             </li>
-            <li>
-              <a href="javascript:;" onMouseEnter={()=>setBarDisplay(true)}>Outlook</a>
-              <ul className={style['details']} onMouseEnter={()=>setBarDisplay(false)}>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:;" onMouseEnter={()=>setBarDisplay(true)}>Lab</a>
-              <ul className={style['details']} onMouseEnter={()=>setBarDisplay(false)}>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:;" onMouseEnter={()=>setBarDisplay(true)}>HP</a>
-              <ul className={style['details']} onMouseEnter={()=>setBarDisplay(false)}>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:;" onMouseEnter={()=>setBarDisplay(true)}>Team</a>
-              <ul className={style['details']} onMouseEnter={()=>setBarDisplay(false)}>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="javascript:;" onMouseEnter={()=>setBarDisplay(true)}>Judging</a>
-              <ul className={style['details']} onMouseEnter={()=>setBarDisplay(false)}>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-                <li><a href="javascript:;">content</a></li>
-              </ul>
-            </li>
-            <div className={style['animation']} style={{background:!barDisplay?"linear-gradient(112.32deg, rgba(209, 250, 240, 0.42) 2.26%, rgba(244, 198, 192, 0.075) 100.53%)":""}}></div>
+            ))}
+            <div className={NavBarCss.animation}
+                 style={{background:!barDisplay
+                   ? "linear-gradient(112.32deg, rgba(209, 250, 240, 0.42) 2.26%, rgba(244, 198, 192, 0.075) 100.53%)"
+                   : ""
+                }}
+            ></div>
           </ul>
         </nav>
       </header>

@@ -49,7 +49,7 @@ function Swiper(props) {
                     {images.map((_, idx) => (
                         <div
                             className={`${SwiperCss.swiper__dot} ${
-                                idx === currentIdx ? SwiperCss.active : ''
+                                idx === currentIdx ? SwiperCss.active : ' '
                             }`}
                             key={idx}
                             onClick={() => setCurrentIdx(idx)}
