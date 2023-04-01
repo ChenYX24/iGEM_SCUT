@@ -1,11 +1,11 @@
 import NavBar from "../components/NavBar"
 import EducationCss from "../css/Education.module.css"
-import SideNav from "../components/SideNav";
+import SideNav from "../components/SideNav"
 import $ from '../js/jquery'
-import Swiper from "../components/Swiper";
+import Swiper from "../components/Swiper"
 
 function Education () {
-    let NavData = [{ id: 0, text: 'Background', isActive: true }, { id: 1, text: 'Overview', isActive: false }, { id: 2, text: 'References', isActive: false },]
+    let NavData = [{ id: 0, text: 'Overview', isActive: true }, { id: 1, text: 'Synthetic_biology', isActive: false }, { id: 2, text: 'Questionnaire_analysis', isActive: false },]
 
     return (
         <>
@@ -14,29 +14,29 @@ function Education () {
                 <div className={EducationCss.backgroundImg}></div>
                 <h1 className={EducationCss.title}>Education</h1>
                 <div className={EducationCss.waveContainer}>
-                     {/*海浪*/}
+                    {/*海浪*/}
                     <svg className={EducationCss.waves} viewBox="0 24 150 28" preserveAspectRatio="none"
-                         shape-rendering="auto">
+                        shape-rendering="auto">
                         <defs>
                             <path id="gentle-wave"
-                                  d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
+                                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                         </defs>
                         <g className={EducationCss.parallax}>
-                            <use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)"/>
-                            <use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"/>
-                            <use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"/>
-                            <use xlinkHref="#gentle-wave" x="48" y="7" fill="#fff"/>
+                            <use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                            <use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                            <use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                            <use xlinkHref="#gentle-wave" x="48" y="7" fill="#fff" />
                         </g>
                     </svg>
                     <div className={EducationCss.filling}>
                     </div>
                 </div>
                 <div className={EducationCss.articleContainer}>
-                    <div className={EducationCss.topContainer}>
+                    <div className={EducationCss.topContainer} id="Overview">
                         <h2 >Overview</h2>
                         <p>{overviewContent}</p>
                     </div>
-                    <div className={EducationCss.midContainer}>
+                    <div className={EducationCss.midContainer} id="Synthetic_biology">
                         <div className={EducationCss.leftBox1}>
                             <h2 >Synthetic biology</h2>
                             <p>{syntheticBiologyContent1}</p>
@@ -50,7 +50,7 @@ function Education () {
                                 require('../assets/education/edu3.jpg'),
                                 require('../assets/education/edu4.jpg'),
                                 require('../assets/education/edu5.jpg')
-                            ]}/>
+                            ]} />
                         </div>
                         <div className={EducationCss.leftBox2}>
                             <Swiper images={[
@@ -59,7 +59,7 @@ function Education () {
                                 require('../assets/education/edu8.jpg'),
                                 require('../assets/education/edu9.jpg'),
                                 require('../assets/education/edu10.jpg')
-                            ]}/>
+                            ]} />
                         </div>
                         <div className={EducationCss.rightBox2}>
                             <p>{syntheticBiologyContent3}</p>
@@ -78,29 +78,29 @@ function Education () {
                                 require('../assets/education/edu13.jpg'),
                                 require('../assets/education/edu14.jpg'),
                                 require('../assets/education/edu15.jpg')
-                            ]}/>
+                            ]} />
                         </div>
                     </div>
-                    <div className={EducationCss.bottomContainer}>
+                    <div className={EducationCss.bottomContainer} id="Questionnaire_analysis">
                         <h2>Questionnaire analysis</h2>
                         <div className={EducationCss.box}>
-                            <p>{questionnaireAnalysis1}</p><br/>
-                            <p>{questionnaireAnalysis2}</p><br/>
-                            <p>{questionnaireAnalysis3}</p><br/>
+                            <p>{questionnaireAnalysis1}</p><br />
+                            <p>{questionnaireAnalysis2}</p><br />
+                            <p>{questionnaireAnalysis3}</p><br />
                         </div>
                         <div className={EducationCss.box}>
-                            <p>{questionnaireAnalysis4}</p><br/>
-                            <p>{questionnaireAnalysis5}</p><br/>
-                            <p>{questionnaireAnalysis6}</p><br/>
+                            <p>{questionnaireAnalysis4}</p><br />
+                            <p>{questionnaireAnalysis5}</p><br />
+                            <p>{questionnaireAnalysis6}</p><br />
                         </div>
                         <div className={EducationCss.box}>
-                            <p>{questionnaireAnalysis7}</p><br/>
-                            <p>{questionnaireAnalysis8}</p><br/>
-                            <p>{questionnaireAnalysis9}</p><br/>
+                            <p>{questionnaireAnalysis7}</p><br />
+                            <p>{questionnaireAnalysis8}</p><br />
+                            <p>{questionnaireAnalysis9}</p><br />
                         </div>
                     </div>
                 </div>
-                {/*<SideNav data={NavData} />*/}
+                <SideNav data={NavData} />
             </div>
         </>
     )

@@ -53,11 +53,13 @@
   /* box-shadow: 0 5px 202px rgba(54, 185, 179, 0.5); */
   height: 20vw;
   position: absolute;
-  font: 900 7.5rem '';
+  font-weight: 900;
+  font-size: clamp(4rem, 2.727rem + 6.36vw, 7.5rem);
   color: white;
+  font-family: 'Poppins', sans-serif;
   z-index: 1;
   top: 30vw;
-  text-shadow: 0 0 15px rgba(255,255,255,.75);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
   /* opacity: 0.8; */
 }
 .fadein._visible {

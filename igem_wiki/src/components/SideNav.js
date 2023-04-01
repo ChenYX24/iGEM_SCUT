@@ -42,8 +42,8 @@ function SideNav (props) {
     var docScrollTop = document.documentElement.scrollTop || document.body.scrollTop
     if (!isClick) {
       let newData = [...data]
-      data.map(item => {
 
+      data.map(item => {
         if (docScrollTop > $(`#${item.text}`).offset().top - 10) {
           newData.map(item2 => {
             item2.isActive = false
