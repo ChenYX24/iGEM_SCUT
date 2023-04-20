@@ -16,18 +16,17 @@
   position: fixed;
   top: 15%;
   left: 0px;
-
   display: flex;
   flex-direction: column;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
   backdrop-filter: blur(4px);
   overflow: hidden;
-  background: rgba(97, 184, 176, 0.22);
 }
 .sideNavContainer > div {
   display: flex;
   align-items: center;
+  background: rgba(97, 184, 176, 0.22);
 }
 .sideNavContainer > .active {
   background: rgba(97, 184, 176, 0.11) !important;
