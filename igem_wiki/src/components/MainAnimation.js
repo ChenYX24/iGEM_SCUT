@@ -44,7 +44,7 @@ function MainAnimation () {
         <img src={require("../resources/003.png")} id="img3"></img>
         <img src={require("../resources/004.png")} id="img4"></img>
         <img src={require("../resources/005.png")} id="img5"></img>
-        <div className='text fadein'>SCUT-China</div>
+        <div className='text fadein'>ECO-SHELLS</div>
       </div>
     </div>
   )

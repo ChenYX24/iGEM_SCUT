@@ -1,7 +1,26 @@
+.LoadingContainer {
+  /* display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center; */
+  width: 100vw;
+  height: 88vh;
+}
+.LoadingBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .flower {
   width: 30vw;
   height: 30vw;
   fill-opacity: calc(0);
+  margin: 0 auto;
 }
 .flowerHeart {
   /*填充颜色*/
@@ -79,6 +98,8 @@
   display: flex; /* 使用flex布局 */
   justify-content: space-between; /* 每个li之间的间距均分 */
   overflow: hidden;
+  padding-left: 3vw;
+  transform: translateY(-3vh);
 }
 .liBox {
   padding: 0 10px;
