@@ -7,7 +7,7 @@
   width: 100vw;
   height: 88vh;
 }
-.LoadingBox {
+.loadingBox {
   position: absolute;
   top: 50%;
   left: 50%;

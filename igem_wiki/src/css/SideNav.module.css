@@ -21,7 +21,6 @@
   flex-direction: column;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
-  box-shadow: 0px 2px 2px 0px;
   backdrop-filter: blur(4px);
   overflow: hidden;
   background: rgba(97, 184, 176, 0.22);
@@ -53,46 +52,18 @@
   text-align: center;
 }
 /* .button {
-  margin-top: 10px;
-  cursor: pointer;
+margin-top: 10px;
+cursor: pointer;
 } */
 /* .button:not(.active):hover {
-  background-color: aqua;
+background-color: aqua;
 }
 .button.active {
-  background-color: #f1a8a8;
+background-color: #f1a8a8;
 } */
 
 .circle {
   position: fixed;
-  top: 15%;
-  left: 4%;
-  width: 100px;
-  height: 100px;
-  background: #eee;
-  margin: 100px auto;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  display: block;
-}
-.left,
-.right {
-  width: 50px;
-  height: 100px;
-  position: absolute;
-
-  opacity: 0.5;
-  overflow: hidden;
-}
-.right {
-  right: 0;
-}
-.left .left_circle,
-.right .right_circle {
-  width: 50px;
   height: 100px;
   background: red;
   opacity: 0.5;
@@ -146,18 +117,18 @@
   }
 }
 /* .left:hover .left_circle {
-  transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
+transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+-o-transform: rotate(360deg);
 }
 .right:hover .right_circle {
-  transform: rotate(0deg);
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
+transform: rotate(0deg);
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+-ms-transform: rotate(0deg);
+-o-transform: rotate(0deg);
 } */
 .inner {
   width: 80px;
