@@ -1,105 +1,57 @@
-:root {
+/* :root {
   --Lfrom-deg: 180deg;
   --Rfrom-deg: -180deg;
   --Rto-deg: 0deg;
   --Lto-deg: 360deg;
-}
-.SideNav {
-  position: fixed;
-  top: 15%;
-  left: 4%;
-  width: 100px;
-  height: 100px;
-  margin: 100px auto;
-}
-.sideNavContainer {
-  position: fixed;
-  top: 15%;
-  left: 0px;
-
-  display: flex;
-  flex-direction: column;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
-  box-shadow: 0px 2px 2px 0px;
-  backdrop-filter: blur(4px);
-  overflow: hidden;
-  background: rgba(97, 184, 176, 0.22);
-}
-.sideNavContainer > div {
-  display: flex;
-  align-items: center;
-}
-.sideNavContainer > .active {
-  background: rgba(97, 184, 176, 0.11) !important;
-}
-.sideNavContainer > :hover {
-  background: rgba(97, 184, 176, 0.33) !important;
-  cursor: pointer;
-}
-.button {
-  cursor: pointer;
-  max-width: 200px;
-  word-wrap: break-word;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  display: inline-block;
-  /**文本1*/
-  font-size: 24px;
-  font-weight: 400;
-  color: rgba(85, 178, 170, 1);
-  margin: 20px;
-  text-align: center;
-}
-/* .button {
-  margin-top: 10px;
-  cursor: pointer;
 } */
-/* .button:not(.active):hover {
-  background-color: aqua;
-}
-.button.active {
-  background-color: #f1a8a8;
-} */
-
 .circle {
-  position: fixed;
+  --Lfrom-deg: 180deg;
+  --Rfrom-deg: -180deg;
+  --Rto-deg: 0deg;
+  --Lto-deg: 360deg;
+  /*position: fixed;
   top: 15%;
   left: 4%;
-  width: 100px;
-  height: 100px;
+  */
+  width: 40px;
+  height: 40px;
   background: #eee;
-  margin: 100px auto;
+  /*margin: 100px auto;
+  */
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  display: block;
+  display: inline-block;
+  position: relative;
 }
 .left,
 .right {
-  width: 50px;
-  height: 100px;
+  width: 20px;
+  height: 40px;
   position: absolute;
 
   opacity: 0.5;
   overflow: hidden;
 }
 .right {
-  right: 0;
+  left: 20px;
 }
 .left .left_circle,
 .right .right_circle {
-  width: 50px;
-  height: 100px;
-  background: red;
-  opacity: 0.5;
+  width: 20px;
+  height: 40px;
+  background: rgba(80, 176, 168, 1);
+  /* transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s; */
 }
 .left .left_circle {
-  border-top-left-radius: 100px;
-  border-bottom-left-radius: 100px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
   transform-origin: right center;
   transform: rotate(var(--Lfrom-deg));
   -webkit-transform: rotate(var(--Lfrom-deg));
@@ -124,7 +76,7 @@
 .right .right_circle {
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
-  background: red;
+  background: rgba(80, 176, 168, 1);
   transform-origin: left center;
   transform: rotate(var(--Rfrom-deg));
   -webkit-transform: rotate(var(--Rfrom-deg));
@@ -145,31 +97,19 @@
     -o-transform: rotate(var(--Rto-deg));
   }
 }
-/* .left:hover .left_circle {
-  transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-}
-.right:hover .right_circle {
-  transform: rotate(0deg);
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-} */
 .inner {
-  width: 80px;
-  height: 80px;
+  display: flex;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   text-align: center;
-  line-height: 80px;
-  position: absolute;
+  line-height: 20px;
+  position: relative;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -178,5 +118,5 @@
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   color: #999;
-  background: #fff;
+  background: rgba(97, 184, 176, 0.22);
 }
