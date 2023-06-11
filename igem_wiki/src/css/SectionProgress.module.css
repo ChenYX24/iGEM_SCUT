@@ -118,5 +118,7 @@
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   color: #999;
-  background: rgba(97, 184, 176, 0.22);
+  /* background: rgba(97, 184, 176, 0.22);
+   */
+  background: rgba(170, 217, 214, 1);
 }

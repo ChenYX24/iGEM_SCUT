@@ -18,7 +18,7 @@ function SectionProgress ({ progress, lFromDeg, rFromDeg, rToDeg, lToDeg }) {
         <div className={SectionProgressCss.right}>
           <div className={`${SectionProgressCss.right_circle} ${SectionProgressCss ? SectionProgressCss.animate : ""}`}></div>
         </div>
-        <div className={SectionProgressCss.inner}>{progress}</div>
+        <div className={SectionProgressCss.inner}></div>
       </div>
 
     </>
