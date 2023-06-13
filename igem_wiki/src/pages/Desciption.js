@@ -231,6 +231,7 @@ const backgroundContent_p2 = ' tons of shell waste from shrimps and crabs is pro
 const backgroundContent_p3 = ', China. This is a province adjacent to the southern seacoast of the mainland, with a river coming across it.'
 
 const backgroundContent_p4 = 'Traditional strategies of dealing with those shell waste like burning, burying, or even leave them back in the sea, is extremely '
+
 const backgroundContent_p5 = ' (Islam, Khan, & Tanaka, 2004) . The existing chemical methods of degradation fail to fully utilize valuable chemicals, yet is costly in energy. For the promising biochemical resource lies in shell waste, '
 
 const backgroundContent_p6 = "During our interview with Prof.Luo, we discussed a lot about the biological ways to recycle shrimp shell. The chemical structure of shell waste is the trickiest factor in degradation. With "
