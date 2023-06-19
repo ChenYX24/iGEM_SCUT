@@ -2,9 +2,23 @@ import NavBar from "../components/NavBar"
 import SideNav from "../components/SideNav"
 import Swiper from "../components/Swiper"
 import EducationCss from "../css/Education.module.css"
+import { useState, useEffect } from "react"
 
 function Education () {
   let NavData = [{ id: 0, text: 'Overview', isActive: true }, { id: 1, text: 'syntheticBiology', isActive: false }, { id: 2, text: 'questionnaireAnalysis', isActive: false },]
+
+  const [picsDisplay, setPicsDisplay] = useState(false)
+  const [hidden, setHidden] = useState(true)
+
+  useEffect(() => {
+    if (picsDisplay == false) {
+      setTimeout(() => {
+        setHidden(true)
+      }, 1000)
+    } else {
+      setHidden(false)
+    }
+  }, [picsDisplay])
 
   return (
     <>
@@ -32,7 +46,11 @@ function Education () {
         </div>
         <div className={EducationCss.articleContainer}>
           <div className={EducationCss.topContainer} id="Overview">
+<<<<<<< HEAD
             <h2 >Overview</h2>
+=======
+            <h2 id={EducationCss.subTitle1} className={EducationCss.subTitle}>Overview</h2>
+>>>>>>> 3ed7f5c04253ff3e63bc5086fc6669cc323ff6d5
             <div className={EducationCss.bar}>
               <div className={EducationCss.insideBar}></div>
             </div>
@@ -41,13 +59,21 @@ function Education () {
             </div>
           </div>
           <div className={EducationCss.midContainer} id="syntheticBiology">
+<<<<<<< HEAD
             <h2 >Synthetic biology</h2>
+=======
+            <h2 id={EducationCss.subTitle2} className={EducationCss.subTitle}>Synthetic biology</h2>
+>>>>>>> 3ed7f5c04253ff3e63bc5086fc6669cc323ff6d5
             <div className={EducationCss.bar}>
               <div className={EducationCss.insideBar}></div>
             </div>
             <div className={EducationCss.midBox}>
               <div className={EducationCss.backgroundBlock}></div>
+<<<<<<< HEAD
               <div className={EducationCss.leftBox1} >
+=======
+              <div className={EducationCss.leftBox1}>
+>>>>>>> 3ed7f5c04253ff3e63bc5086fc6669cc323ff6d5
                 <Swiper images={[
                   require('../assets/education/edu1.jpg'),
                   require('../assets/education/edu2.jpg'),
@@ -61,7 +87,11 @@ function Education () {
               </div>
               <div className={EducationCss.leftBox2}>
                 <p>{syntheticBiologyContent2}</p>
+<<<<<<< HEAD
                 <br/><br/><br/>
+=======
+                <br /><br />
+>>>>>>> 3ed7f5c04253ff3e63bc5086fc6669cc323ff6d5
                 <p>{syntheticBiologyContent3}</p>
               </div>
               <div className={EducationCss.rightBox2}>
@@ -72,6 +102,7 @@ function Education () {
               <div className={EducationCss.bottomBox1}>
                 <p>{syntheticBiologyContent4}</p>
               </div>
+<<<<<<< HEAD
               <div className={EducationCss.leftBox3}>
                 <p>{syntheticBiologyContent4}</p>
                 <br></br>
@@ -87,16 +118,47 @@ function Education () {
                   require('../assets/education/edu14.jpg'),
                   require('../assets/education/edu15.jpg')
                 ]} />
+=======
+              <div className={EducationCss.imgBox}></div>
+              <div className={EducationCss.leftBox3}>
+                <div className={EducationCss.insideBox}></div>
+              </div>
+              <div className={EducationCss.rightBox3}>
+                <p>{syntheticBiologyContent5}</p>
+              </div>
+              <div className={EducationCss.leftBox4}>
+                <p>{syntheticBiologyContent6}</p>
+              </div>
+              <div className={EducationCss.rightBox4}>
+                <div className={EducationCss.insideBox}></div>
+              </div>
+              <div className={EducationCss.leftBox5}>
+                <div className={EducationCss.insideBox}></div>
+              </div>
+              <div className={EducationCss.rightBox5}>
+                <p>{syntheticBiologyContent7}</p>
+              </div>
+              <div className={EducationCss.bottomImgBox}>
+                <img src={require('../assets/education/edu3.jpg')} />
+                <img src={require('../assets/education/edu4.jpg')} />
+                <img src={require('../assets/education/edu5.jpg')} />
+                <img src={require('../assets/education/edu6.jpg')} />
+>>>>>>> 3ed7f5c04253ff3e63bc5086fc6669cc323ff6d5
               </div>
             </div>
           </div>
           <div className={EducationCss.bottomContainer} id="questionnaireAnalysis">
+<<<<<<< HEAD
             <h2>Questionnaire analysis</h2>
+=======
+            <h2 id={EducationCss.subTitle3} className={EducationCss.subTitle}>Questionnaire analysis</h2>
+>>>>>>> 3ed7f5c04253ff3e63bc5086fc6669cc323ff6d5
             <div className={EducationCss.bar}>
               <div className={EducationCss.insideBar}></div>
             </div>
             <div className={EducationCss.bottomBox}>
               <div className={EducationCss.box}>
+<<<<<<< HEAD
                 <p>{questionnaireAnalysis1}</p><br />
                 <p>{questionnaireAnalysis2}</p><br />
                 <p>{questionnaireAnalysis3}</p><br />
@@ -111,6 +173,77 @@ function Education () {
                 <p>{questionnaireAnalysis8}</p><br />
                 <p>{questionnaireAnalysis9}</p><br />
               </div>
+=======
+                <div className={EducationCss.sideBar1}></div>
+                <div className={EducationCss.sideBox1}>
+                  <p>{questionnaireAnalysis1}</p></div>
+              </div>
+              <div className={EducationCss.box}>
+                <div className={EducationCss.sideBox2}>
+                  <p>{questionnaireAnalysis2}</p></div>
+                <div className={EducationCss.pillar1}></div>
+                <div className={EducationCss.sideBar2}></div>
+              </div>
+              <div className={EducationCss.box}>
+                <div className={EducationCss.sideBar3}></div>
+                <div className={EducationCss.pillar2}></div>
+                <div className={EducationCss.pillar3}></div>
+                <div className={EducationCss.sideBox3}>
+                  <p>{questionnaireAnalysis3}</p></div>
+              </div>
+              <div className={EducationCss.box}>
+                <img src={require('../assets/education/chart1.png')} />
+                <img src={require('../assets/education/chart2.png')} />
+              </div>
+              <div className={EducationCss.textBox}>
+                <p>{questionnaireAnalysis4}</p></div>
+              <div className={EducationCss.box}>
+                <div className={EducationCss.sideBar4}></div>
+                <div className={EducationCss.sideBox4}>
+                  <p>{questionnaireAnalysis5}</p></div>
+              </div>
+              <div className={EducationCss.textBox}>
+                <p>{questionnaireAnalysis6}</p></div>
+              <div className={EducationCss.pictureHeader}>
+                <h3>Picture</h3>
+                <div
+                  className={EducationCss.btn}
+                  onClick={() => {
+                    setTimeout(() => {
+                      setPicsDisplay(!picsDisplay)
+                    }, 0)
+                  }}>
+                  <div
+                    className={`${EducationCss.circle} ${picsDisplay ?
+                        EducationCss.toggle : ''
+                      }`} />
+                </div>
+              </div>
+              <div
+                className={`${EducationCss.picsContainer} ${picsDisplay ? EducationCss.active : ''
+                  }`}>
+                {!hidden && <Swiper
+                  images={[
+                    require('../assets/education/edu1.jpg'),
+                    require('../assets/education/edu2.jpg'),
+                    require('../assets/education/edu3.jpg'),
+                    require('../assets/education/edu4.jpg'),
+                    require('../assets/education/edu5.jpg')
+                  ]} />}
+              </div>
+              <div className={EducationCss.box}>
+                <div className={EducationCss.sideBox5}>
+                  <p>{questionnaireAnalysis7}</p></div>
+                <div className={EducationCss.sideBar5}></div>
+              </div>
+              <div className={EducationCss.box}>
+                <img style={{ width: "100%" }} src={require('../assets/education/chart6.png')} />
+              </div>
+              <div className={EducationCss.textBox}>
+                <p>{questionnaireAnalysis8}</p></div>
+              <div className={EducationCss.textBox}>
+                <p>{questionnaireAnalysis9}</p></div>
+>>>>>>> 3ed7f5c04253ff3e63bc5086fc6669cc323ff6d5
             </div>
           </div>
         </div>
@@ -136,6 +269,7 @@ const syntheticBiologyContent1 = 'After poring over the high school biology text
   'This field would be perfect for students preparing for the biology exam in the\n' +
   'College Entrance Examination (Chinese Gao Kao) and is also closely related to our\n' +
   'experiments in molecular biology and the initial stages of our project. '
+<<<<<<< HEAD
 
 const syntheticBiologyContent2 = 'After gaining\n' +
     'permission from The High School Affiliated to Zhejiang University (Hangzhou,\n' +
@@ -143,6 +277,15 @@ const syntheticBiologyContent2 = 'After gaining\n' +
     'conducted the lecture on January 12, 2023, for five classes in grades 3 and 2\n' +
     '(equivalent to K12 and K11 in the United States).'
 
+=======
+
+const syntheticBiologyContent2 = 'After gaining\n' +
+  'permission from The High School Affiliated to Zhejiang University (Hangzhou,\n' +
+  'China) and The No.1 High School of Jiangyong County (Jiangyong, China), we\n' +
+  'conducted the lecture on January 12, 2023, for five classes in grades 3 and 2\n' +
+  '(equivalent to K12 and K11 in the United States).'
+
+>>>>>>> 3ed7f5c04253ff3e63bc5086fc6669cc323ff6d5
 const syntheticBiologyContent3 = 'Our class was designed as a step-by-step exploration of our project. We presented\n' +
   'the general background of our project and guided students to think about how to\n' +
   'choose bacteria, insert the gene of interest, and optimize the outcome. Through\n' +
@@ -166,12 +309,19 @@ const syntheticBiologyContent5 = 'We also introduced the iGEM competition and th
   'research. In the feedback, many students found that this helped them a lot in\n' +
   'understanding scientific research and progress.'
 
+<<<<<<< HEAD
 // const syntheticBiologyContent5 = 'Finally, we played a video made by one of our team members, showing the real\n' +
 //   'daily routine of students majoring in biology as iGEMers. This video had been\n' +
 //   'previously praised by the teachers at that school, and some students were inspired\n' +
 //   'to learn more about the competition and biology major.'
+=======
+const syntheticBiologyContent6 = 'Finally, we played a video made by one of our team members, showing the real\n' +
+  'daily routine of students majoring in biology as iGEMers. This video had been\n' +
+  'previously praised by the teachers at that school, and some students were inspired\n' +
+  'to learn more about the competition and biology major.'
+>>>>>>> 3ed7f5c04253ff3e63bc5086fc6669cc323ff6d5
 
-const syntheticBiologyContent6 = 'At the end of the lecture, we handed out our questionnaire and answered their\n' +
+const syntheticBiologyContent7 = 'At the end of the lecture, we handed out our questionnaire and answered their\n' +
   'questions. For other classes that were happening simultaneously and that we\n' +
   'couldn\'t attend in person, we made a recording in advance. All pictures were taken\n' +
   'by random students and teachers who volunteered, and we really appreciate their\n' +
