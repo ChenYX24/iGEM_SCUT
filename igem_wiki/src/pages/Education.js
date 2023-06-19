@@ -33,69 +33,84 @@ function Education () {
         <div className={EducationCss.articleContainer}>
           <div className={EducationCss.topContainer} id="Overview">
             <h2 >Overview</h2>
-            <p>{overviewContent}</p>
+            <div className={EducationCss.bar}>
+              <div className={EducationCss.insideBar}></div>
+            </div>
+            <div className={EducationCss.topBox}>
+              <p>{overviewContent}</p>
+            </div>
           </div>
           <div className={EducationCss.midContainer} id="syntheticBiology">
-            <div className={EducationCss.leftBox1} >
-              <h2 >Synthetic biology</h2>
-              <p>{syntheticBiologyContent1}</p>
-              <br></br>
-              <p>{syntheticBiologyContent2}</p>
+            <h2 >Synthetic biology</h2>
+            <div className={EducationCss.bar}>
+              <div className={EducationCss.insideBar}></div>
             </div>
-            <div className={EducationCss.rightBox1}>
-              <Swiper images={[
-                require('../assets/education/edu1.jpg'),
-                require('../assets/education/edu2.jpg'),
-                require('../assets/education/edu3.jpg'),
-                require('../assets/education/edu4.jpg'),
-                require('../assets/education/edu5.jpg')
-              ]} />
-            </div>
-            <div className={EducationCss.leftBox2}>
-              <Swiper images={[
-                require('../assets/education/edu6.jpg'),
-                require('../assets/education/edu7.jpg'),
-                require('../assets/education/edu8.jpg'),
-                require('../assets/education/edu9.jpg'),
-                require('../assets/education/edu10.jpg')
-              ]} />
-            </div>
-            <div className={EducationCss.rightBox2}>
-              <p>{syntheticBiologyContent3}</p>
-            </div>
-            <div className={EducationCss.leftBox3}>
-              <p>{syntheticBiologyContent4}</p>
-              <br></br>
-              <p>{syntheticBiologyContent5}</p>
-              <br></br>
-              <p>{syntheticBiologyContent6}</p>
-            </div>
-            <div className={EducationCss.rightBox3}>
-              <Swiper images={[
-                require('../assets/education/edu11.jpg'),
-                require('../assets/education/edu12.jpg'),
-                require('../assets/education/edu13.jpg'),
-                require('../assets/education/edu14.jpg'),
-                require('../assets/education/edu15.jpg')
-              ]} />
+            <div className={EducationCss.midBox}>
+              <div className={EducationCss.backgroundBlock}></div>
+              <div className={EducationCss.leftBox1} >
+                <Swiper images={[
+                  require('../assets/education/edu1.jpg'),
+                  require('../assets/education/edu2.jpg'),
+                  require('../assets/education/edu3.jpg'),
+                  require('../assets/education/edu4.jpg'),
+                  require('../assets/education/edu5.jpg')
+                ]} />
+              </div>
+              <div className={EducationCss.rightBox1}>
+                <p>{syntheticBiologyContent1}</p>
+              </div>
+              <div className={EducationCss.leftBox2}>
+                <p>{syntheticBiologyContent2}</p>
+                <br/><br/><br/>
+                <p>{syntheticBiologyContent3}</p>
+              </div>
+              <div className={EducationCss.rightBox2}>
+                <img src={require('../assets/education/edu1.jpg')}></img>
+                <img src={require('../assets/education/edu2.jpg')}></img>
+                <img src={require('../assets/education/edu3.jpg')}></img>
+              </div>
+              <div className={EducationCss.bottomBox1}>
+                <p>{syntheticBiologyContent4}</p>
+              </div>
+              <div className={EducationCss.leftBox3}>
+                <p>{syntheticBiologyContent4}</p>
+                <br></br>
+                <p>{syntheticBiologyContent5}</p>
+                <br></br>
+                <p>{syntheticBiologyContent6}</p>
+              </div>
+              <div className={EducationCss.rightBox3}>
+                <Swiper images={[
+                  require('../assets/education/edu11.jpg'),
+                  require('../assets/education/edu12.jpg'),
+                  require('../assets/education/edu13.jpg'),
+                  require('../assets/education/edu14.jpg'),
+                  require('../assets/education/edu15.jpg')
+                ]} />
+              </div>
             </div>
           </div>
           <div className={EducationCss.bottomContainer} id="questionnaireAnalysis">
             <h2>Questionnaire analysis</h2>
-            <div className={EducationCss.box}>
-              <p>{questionnaireAnalysis1}</p><br />
-              <p>{questionnaireAnalysis2}</p><br />
-              <p>{questionnaireAnalysis3}</p><br />
+            <div className={EducationCss.bar}>
+              <div className={EducationCss.insideBar}></div>
             </div>
-            <div className={EducationCss.box}>
-              <p>{questionnaireAnalysis4}</p><br />
-              <p>{questionnaireAnalysis5}</p><br />
-              <p>{questionnaireAnalysis6}</p><br />
-            </div>
-            <div className={EducationCss.box}>
-              <p>{questionnaireAnalysis7}</p><br />
-              <p>{questionnaireAnalysis8}</p><br />
-              <p>{questionnaireAnalysis9}</p><br />
+            <div className={EducationCss.bottomBox}>
+              <div className={EducationCss.box}>
+                <p>{questionnaireAnalysis1}</p><br />
+                <p>{questionnaireAnalysis2}</p><br />
+                <p>{questionnaireAnalysis3}</p><br />
+              </div>
+              <div className={EducationCss.box}>
+                <p>{questionnaireAnalysis4}</p><br />
+                <p>{questionnaireAnalysis5}</p><br />
+                <p>{questionnaireAnalysis6}</p><br />
+              </div>
+              <div className={EducationCss.box}>
+                <p>{questionnaireAnalysis7}</p><br />
+                <p>{questionnaireAnalysis8}</p><br />
+                <p>{questionnaireAnalysis9}</p><br />
+              </div>
             </div>
           </div>
         </div>
@@ -120,18 +135,20 @@ const syntheticBiologyContent1 = 'After poring over the high school biology text
   'teachers, we decided to design a class focused on introducing genetic engineering.\n' +
   'This field would be perfect for students preparing for the biology exam in the\n' +
   'College Entrance Examination (Chinese Gao Kao) and is also closely related to our\n' +
-  'experiments in molecular biology and the initial stages of our project. After gaining\n' +
-  'permission from The High School Affiliated to Zhejiang University (Hangzhou,\n' +
-  'China) and The No.1 High School of Jiangyong County (Jiangyong, China), we\n' +
-  'conducted the lecture on January 12, 2023, for five classes in grades 3 and 2\n' +
-  '(equivalent to K12 and K11 in the United States).'
+  'experiments in molecular biology and the initial stages of our project. '
 
-const syntheticBiologyContent2 = 'Our class was designed as a step-by-step exploration of our project. We presented\n' +
+const syntheticBiologyContent2 = 'After gaining\n' +
+    'permission from The High School Affiliated to Zhejiang University (Hangzhou,\n' +
+    'China) and The No.1 High School of Jiangyong County (Jiangyong, China), we\n' +
+    'conducted the lecture on January 12, 2023, for five classes in grades 3 and 2\n' +
+    '(equivalent to K12 and K11 in the United States).'
+
+const syntheticBiologyContent3 = 'Our class was designed as a step-by-step exploration of our project. We presented\n' +
   'the general background of our project and guided students to think about how to\n' +
   'choose bacteria, insert the gene of interest, and optimize the outcome. Through\n' +
   'this process, students developed a general impression of our project.'
 
-const syntheticBiologyContent3 = 'During the introduction of our project, we also explained the technology and\n' +
+const syntheticBiologyContent4 = 'During the introduction of our project, we also explained the technology and\n' +
   'protocols involved in our real research, such as PCR, Gibson Assembly, and\n' +
   'transmission. This not only showcased our real wet lab work as iGEMers but also\n' +
   'expanded their high school learning beyond the limited knowledge and\n' +
@@ -143,16 +160,16 @@ const syntheticBiologyContent3 = 'During the introduction of our project, we als
   'engaged in frequent interaction with the narrator, coming up with related\n' +
   'questions afterwards.'
 
-const syntheticBiologyContent4 = 'We also introduced the iGEM competition and the major of biotechnology to them,\n' +
+const syntheticBiologyContent5 = 'We also introduced the iGEM competition and the major of biotechnology to them,\n' +
   'as they were at the stage of picking colleges and majors of their interests. We\n' +
   'explained the iGEM engineering cycle to illustrate how to conduct scientific\n' +
   'research. In the feedback, many students found that this helped them a lot in\n' +
   'understanding scientific research and progress.'
 
-const syntheticBiologyContent5 = 'Finally, we played a video made by one of our team members, showing the real\n' +
-  'daily routine of students majoring in biology as iGEMers. This video had been\n' +
-  'previously praised by the teachers at that school, and some students were inspired\n' +
-  'to learn more about the competition and biology major.'
+// const syntheticBiologyContent5 = 'Finally, we played a video made by one of our team members, showing the real\n' +
+//   'daily routine of students majoring in biology as iGEMers. This video had been\n' +
+//   'previously praised by the teachers at that school, and some students were inspired\n' +
+//   'to learn more about the competition and biology major.'
 
 const syntheticBiologyContent6 = 'At the end of the lecture, we handed out our questionnaire and answered their\n' +
   'questions. For other classes that were happening simultaneously and that we\n' +
