@@ -10,6 +10,60 @@
 
 <body>
   <div class="container">
+    <header>
+      <div class="logo">
+        <img src="https://static.igem.wiki/teams/4621/wiki/logo1.png">
+      </div>
+      <nav>
+        <ul class="columns">
+          <li>
+            <a>Home</a>
+          </li>
+          <li>
+            <a>Team</a>
+            <ul class="details">
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='team') }}">Team</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='attributions') }}">Attributions</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>Project</a>
+            <ul class="details">
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='contribution') }}">Contribution</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='description') }}">Description</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='engineering') }}">Engineering</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='experiments') }}">Experiments</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='notebook') }}">Notebook</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='results') }}">Results</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>Safety</a>
+          </li>
+          <li>
+            <a>HP</a>
+          </li>
+          <li>
+            <a>Awards</a>
+            <ul class="details">
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='education') }}">Education</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='entrepreneurship') }}">Entrepreneurship</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='hardware') }}">Hardware</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='inclusivity') }}">Inclusivity</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='measurement') }}">Measurement</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='model') }}">Model</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='plant') }}">Plant</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='software') }}">Software</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('pages', page='sustainable') }}">Sustainable</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>Judging</a>
+          </li>
+          <div class="animation"></div>
+        </ul>
+      </nav>
+    </header>
     <div class="backgroundImg"></div>
     <h1 class="title">Description</h1>
     <div class="articleContainer">
@@ -222,6 +276,57 @@
     </div>
   </div>
   <script>
+
+    // 获取导航栏元素
+    const nav = document.querySelector('nav ul');
+    // 获取动画元素
+    const animation = document.querySelector('.animation');
+
+    let timer; // 定时器变量
+
+    // 鼠标进入导航栏时的事件处理函数
+    function onMouseEnterHandler(event) {
+      const li = event.target;
+      const idx = Array.from(li.parentNode.children).indexOf(li);
+      const details = nav.children[idx].children[1];
+      timer = setTimeout(() => {
+        if (details) {
+          if (details.style.display !== 'block') {
+            details.style.display = 'block';
+          }
+          Array.from(nav.children).forEach((child, index) => {
+            if (index !== idx) {
+              const details = child.children[1];
+              if (details && details.style.display !== 'none') {
+                details.style.display = 'none';
+              }
+            }
+          });
+          animation.classList.add('active');
+        }
+      }, 600);
+    }
+
+    // 鼠标离开导航栏时的事件处理函数
+    function onMouseLeaveHandler(event) {
+      const li = event.target;
+      const idx = Array.from(li.parentNode.children).indexOf(li);
+      const details = nav.children[idx]
+      clearTimeout(timer); // 清除定时器
+      animation.classList.remove('active');
+      setTimeout(() => {
+        if(details.children[1]) {
+          details.children[1].style.display = 'none';
+        }
+      }, 0);
+    }
+
+    // 给每个导航栏列表项添加事件监听器
+    Array.from(nav.children).forEach((li) => {
+      li.addEventListener('mouseenter', onMouseEnterHandler);
+      li.addEventListener('mouseleave', onMouseLeaveHandler);
+    });
+
     const observer = new IntersectionObserver(ioes => {
       ioes.forEach(ioe => {
         const el = ioe.target
@@ -258,5 +363,4 @@
 
   </script>
 </body>
-
 </html>
