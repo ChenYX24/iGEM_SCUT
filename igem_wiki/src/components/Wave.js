@@ -1,5 +1,11 @@
 import WaveCss from "../css/Wave.module.css"
 function Wave () {
+  const handleBackToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  }
   return (
     <>
       <div>
@@ -24,7 +30,26 @@ function Wave () {
         </svg>
         {/* 页尾 */}
         <div className={WaveCss["footPage"]}>
-          <img src={require("../resources/test.jpg")} alt="" height="100px" width="200px" />
+          <h1 className={WaveCss["title"]}>ABOUT US</h1>
+          <p className={WaveCss["subtitle"]}>2023 iGEM SCUT-ChinaECO-SHELLS</p>
+          <div className={WaveCss["imageRow"]}>
+            <img src={require("../resources/scut.png")} alt="" height="200px" width="200px" />
+            <img src={require("../assets/logo1.png")} alt="" height="200px" width="200px" />
+            <img src={require("../resources/iGEM.png")} alt="" height="200px" width="200px" />
+          </div>
+          <div className={WaveCss["imageRow"]}>
+            <img src={require("../resources/MathWorks.png")} alt="" height="200px" width="200px" />
+            <img src={require("../resources/BiocreAtech.png")} alt="" height="200px" width="200px" />
+            <img src={require("../resources/SnapGene.png")} alt="" height="200px" width="200px" />
+          </div>
+          <hr className={WaveCss["line"]} />
+          <div className={WaveCss["backToTop"]} onClick={handleBackToTop}>
+            <svg className={WaveCss["arrow"]} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 4L4 12h5v8h6v-8h5z" />
+              <path d="M0 0h24v24H0z" fill="none" />
+            </svg>
+            <span className={WaveCss["text"]}>BACK TO THE TOP</span>
+          </div>
         </div>
       </div>
     </>
