@@ -11,7 +11,7 @@ function DynamicNumberBox () {
         regulator: 40
       },
       title: "this is title",
-      text: "If you are getting started with Spring Boot, or “Spring” in general, start by reading this section."
+      text: ""
     },
     {
       className: 'data2',
@@ -22,7 +22,7 @@ function DynamicNumberBox () {
         regulator: 40
       },
       title: "this is title",
-      text: "If you are getting started with Spring Boot, or “Spring” in general, start by reading this section."
+      text: ""
     },
     {
       className: 'data3',
@@ -33,7 +33,7 @@ function DynamicNumberBox () {
         regulator: 40
       },
       title: "this is title",
-      text: "If you are getting started with Spring Boot, or “Spring” in general, start by reading this section."
+      text: ""
     },
     {
       className: 'data4',
@@ -44,7 +44,7 @@ function DynamicNumberBox () {
         regulator: 40
       },
       title: "this is title",
-      text: "If you are getting started with Spring Boot, or “Spring” in general, start by reading this section."
+      text: ""
     }
   ]
   const getCard = (data) => {

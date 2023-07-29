@@ -14,7 +14,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url(../assets/education/education.png);
+  background-image: url('https://static.igem.wiki/teams/4621/wiki/education.png');
   background-size: cover;
   background-position: 50% 70%;
   z-index: 1;

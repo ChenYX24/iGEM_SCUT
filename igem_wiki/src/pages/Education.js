@@ -3,6 +3,7 @@ import SideNav from "../components/SideNav"
 import Swiper from "../components/Swiper"
 import EducationCss from "../css/Education.module.css"
 import { useState, useEffect } from "react"
+import Wave from "../components/Wave"
 
 function Education () {
   let NavData = [{ id: 0, text: 'Overview', isActive: true }, { id: 1, text: 'syntheticBiology', isActive: false }, { id: 2, text: 'questionnaireAnalysis', isActive: false },]
@@ -63,11 +64,11 @@ function Education () {
               <div className={EducationCss.backgroundBlock}></div>
               <div className={EducationCss.leftBox1}>
                 <Swiper images={[
-                  require('../assets/education/edu1.jpg'),
-                  require('../assets/education/edu2.jpg'),
-                  require('../assets/education/edu3.jpg'),
-                  require('../assets/education/edu4.jpg'),
-                  require('../assets/education/edu5.jpg')
+                  'https://static.igem.wiki/teams/4621/wiki/education/edu1.jpg',
+                  'https://static.igem.wiki/teams/4621/wiki/education/edu2.jpg',
+                  'https://static.igem.wiki/teams/4621/wiki/education/edu3.jpg',
+                  'https://static.igem.wiki/teams/4621/wiki/education/edu4.jpg',
+                  'https://static.igem.wiki/teams/4621/wiki/education/edu5.jpg'
                 ]} />
               </div>
               <div className={EducationCss.rightBox1}>
@@ -79,9 +80,9 @@ function Education () {
                 <p>{syntheticBiologyContent3}</p>
               </div>
               <div className={EducationCss.rightBox2}>
-                <img src={require('../assets/education/edu1.jpg')}></img>
-                <img src={require('../assets/education/edu2.jpg')}></img>
-                <img src={require('../assets/education/edu3.jpg')}></img>
+                <img src='https://static.igem.wiki/teams/4621/wiki/education/edu1.jpg'></img>
+                <img src='https://static.igem.wiki/teams/4621/wiki/education/edu2.jpg'></img>
+                <img src='https://static.igem.wiki/teams/4621/wiki/education/edu3.jpg'></img>
               </div>
               <div className={EducationCss.bottomBox1}>
                 <p>{syntheticBiologyContent4}</p>
@@ -106,10 +107,10 @@ function Education () {
                 <p>{syntheticBiologyContent7}</p>
               </div>
               <div className={EducationCss.bottomImgBox}>
-                <img src={require('../assets/education/edu3.jpg')} />
-                <img src={require('../assets/education/edu4.jpg')} />
-                <img src={require('../assets/education/edu5.jpg')} />
-                <img src={require('../assets/education/edu6.jpg')} />
+                <img src='https://static.igem.wiki/teams/4621/wiki/education/edu3.jpg' />
+                <img src='https://static.igem.wiki/teams/4621/wiki/education/edu4.jpg' />
+                <img src='https://static.igem.wiki/teams/4621/wiki/education/edu5.jpg' />
+                <img src='https://static.igem.wiki/teams/4621/wiki/education/edu6.jpg' />
               </div>
             </div>
           </div>
@@ -138,8 +139,8 @@ function Education () {
                   <p>{questionnaireAnalysis3}</p></div>
               </div>
               <div className={EducationCss.box}>
-                <img src={require('../assets/education/chart1.png')} />
-                <img src={require('../assets/education/chart2.png')} />
+                <img src='https://static.igem.wiki/teams/4621/wiki/education/chart1.png' />
+                <img src='https://static.igem.wiki/teams/4621/wiki/education/chart2.png' />
               </div>
               <div className={EducationCss.textBox}>
                 <p>{questionnaireAnalysis4}</p></div>
@@ -161,7 +162,7 @@ function Education () {
                   }}>
                   <div
                     className={`${EducationCss.circle} ${picsDisplay ?
-                        EducationCss.toggle : ''
+                      EducationCss.toggle : ''
                       }`} />
                 </div>
               </div>
@@ -170,11 +171,11 @@ function Education () {
                   }`}>
                 {!hidden && <Swiper
                   images={[
-                    require('../assets/education/edu1.jpg'),
-                    require('../assets/education/edu2.jpg'),
-                    require('../assets/education/edu3.jpg'),
-                    require('../assets/education/edu4.jpg'),
-                    require('../assets/education/edu5.jpg')
+                    'https://static.igem.wiki/teams/4621/wiki/education/edu1.jpg',
+                    'https://static.igem.wiki/teams/4621/wiki/education/edu2.jpg',
+                    'https://static.igem.wiki/teams/4621/wiki/education/edu3.jpg',
+                    'https://static.igem.wiki/teams/4621/wiki/education/edu4.jpg',
+                    'https://static.igem.wiki/teams/4621/wiki/education/edu5.jpg'
                   ]} />}
               </div>
               <div className={EducationCss.box}>
@@ -183,7 +184,7 @@ function Education () {
                 <div className={EducationCss.sideBar5}></div>
               </div>
               <div className={EducationCss.box}>
-                <img style={{ width: "100%" }} src={require('../assets/education/chart6.png')} />
+                <img style={{ width: "100%" }} src="https://static.igem.wiki/teams/4621/wiki/education/chart6.png" />
               </div>
               <div className={EducationCss.textBox}>
                 <p>{questionnaireAnalysis8}</p></div>
@@ -193,6 +194,7 @@ function Education () {
           </div>
         </div>
         <SideNav data={NavData} />
+        <Wave></Wave>
       </div>
     </>
   )

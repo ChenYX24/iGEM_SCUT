@@ -33,14 +33,14 @@ function Wave () {
           <h1 className={WaveCss["title"]}>ABOUT US</h1>
           <p className={WaveCss["subtitle"]}>2023 iGEM SCUT-ChinaECO-SHELLS</p>
           <div className={WaveCss["imageRow"]}>
-            <img src={require("../resources/scut.png")} alt="" height="200px" width="200px" />
-            <img src={require("../assets/logo1.png")} alt="" height="200px" width="200px" />
-            <img src={require("../resources/iGEM.png")} alt="" height="200px" width="200px" />
+            <img src="https://static.igem.wiki/teams/4621/wiki/scut.png" alt="" height="200px" width="200px" />
+            <img src="https://static.igem.wiki/teams/4621/wiki/logo1.png" alt="" height="200px" width="200px" />
+            <img src="https://static.igem.wiki/teams/4621/wiki/igem.png" alt="" height="200px" width="200px" />
           </div>
           <div className={WaveCss["imageRow"]}>
-            <img src={require("../resources/MathWorks.png")} alt="" height="200px" width="200px" />
-            <img src={require("../resources/BiocreAtech.png")} alt="" height="200px" width="200px" />
-            <img src={require("../resources/SnapGene.png")} alt="" height="200px" width="200px" />
+            <img src="https://static.igem.wiki/teams/4621/wiki/mathworks.png" alt="" height="200px" width="200px" />
+            <img src="https://static.igem.wiki/teams/4621/wiki/biocreatech.png" alt="" height="200px" width="200px" />
+            <img src="https://static.igem.wiki/teams/4621/wiki/snapgene.png" alt="" height="200px" width="200px" />
           </div>
           <hr className={WaveCss["line"]} />
           <div className={WaveCss["backToTop"]} onClick={handleBackToTop}>

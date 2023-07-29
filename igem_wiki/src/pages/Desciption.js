@@ -1,5 +1,6 @@
 import NavBar from "../components/NavBar"
 import SideNav from "../components/SideNav"
+import Wave from "../components/Wave"
 import DesciptionCss from "../css/Description.module.css"
 import { useState, useEffect } from "react"
 
@@ -17,28 +18,12 @@ function Desciption () {
       el.onload = el.onerror = () => observer.unobserve(el)
     })
   })
-  const VideoObserver = new IntersectionObserver(ioes => {
-    ioes.forEach(ioe => {
-      const el = ioe.target
-      const intersectionRatio = ioe.intersectionRatio
-      if (intersectionRatio > 0 && intersectionRatio <= 1) {
-        console.log(el)
-        el.play()
-      }
-      el.onload = el.onerror = () => VideoObserver.unobserve(el)
-    })
-  })
 
   useEffect(() => {
     for (let i = 0; i < 14; i += 1) {
       observer.observe(document.querySelector(`.fadeinBox${i + 1}`))
     }
-    const video1 = document.querySelector('.video1')
-    VideoObserver.observe(video1)
-    // console.log(video1)
-    video1.addEventListener("ended", function () {
-      video1.pause()
-    })
+
   }, [])
 
   return (
@@ -78,7 +63,7 @@ function Desciption () {
               <div className={DesciptionCss.box1 + " " + DesciptionCss.fadein + " " + "fadeinBox2"}>
                 <div className={DesciptionCss.sideBar1}></div>
                 <div className={DesciptionCss.imgBox + " " + DesciptionCss.fadeintarget}>
-                  <img style={{ width: "100%" }} src={require('../assets/description/figure1.png')}></img>
+                  <img style={{ width: "100%" }} src='https://static.igem.wiki/teams/4621/wiki/figure1.png'></img>
                 </div>
               </div>
               <div className={DesciptionCss.fadein + " " + "fadeinBox3"}>
@@ -103,9 +88,7 @@ function Desciption () {
                     </div>
                   </div>
                   <div className={DesciptionCss.imgBox}>
-                    {/* <img style={{ width: "100%" }} src={require('../assets/description/广东省.gif')}></img> */}
-                    <video className='video1' muted
-                      style={{ width: "100%" }} src={require('../assets/description/GuangDong.mp4')}></video>
+                    <img style={{ width: "100%" }} src='https://static.igem.wiki/teams/4621/wiki/guangdong.gif'></img>
                   </div>
 
                 </div>
@@ -127,7 +110,7 @@ function Desciption () {
                 </p>
               </div>
               <div className={DesciptionCss.textBox + " " + DesciptionCss.fadein + " " + "fadeinBox14"}>
-                <img className={DesciptionCss.fadeintarget} style={{ width: "100%" }} src={require('../assets/description/layer.png')}>
+                <img className={DesciptionCss.fadeintarget} style={{ width: "100%" }} src='https://static.igem.wiki/teams/4621/wiki/layer.png'>
                 </img>
               </div>
               <div className={DesciptionCss.textBox + " " + DesciptionCss.fadein + " " + "fadeinBox7"}>
@@ -209,14 +192,15 @@ function Desciption () {
               <div className={DesciptionCss.insideBar}></div>
             </div>
             <div className={DesciptionCss.bottomBox} >
-              <p>{referenceContent_p1}</p>
-              <p>{referenceContent_p2}</p>
-              <p>{referenceContent_p3}</p>
-              <p>{referenceContent_p4}</p>
+              <p>[1] {referenceContent_p1}</p>
+              <p>[2] {referenceContent_p2}</p>
+              <p>[3] {referenceContent_p3}</p>
+              <p>[4] {referenceContent_p4}</p>
             </div>
           </div>
         </div>
         <SideNav data={NavData} />
+        <Wave></Wave>
       </div >
     </>
   )

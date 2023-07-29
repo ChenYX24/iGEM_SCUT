@@ -14,8 +14,8 @@ function App () {
         {/*<Link to="/">首页</Link>|*/}
         {/*<Link to="/about">关于</Link>*/}
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/about" element={<About />}></Route>
+          <Route path="/" element={<About />}></Route>
+          {/* <Route path="/about" element={<About />}></Route> */}
           <Route path="/education" element={<Education />}></Route>
           <Route path="/description" element={<Desciption />}></Route>
         </Routes>
